@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcrdf="http://purl.org/dc/rdf/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:iso="http://www.isotc211.org/19115/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rdf:Description rdf:about="e14a9ff0-7973-4134-955a-ceede419d0b0">
+        <dc:title>Abby Jaye</dc:title>
+        <v:role>Associate Scientist</v:role>
+        <dcterms:isPartOf>
+            <foaf:Organization>
+                <dcrdf:valueString>National Center for Atmospheric Research</dcrdf:valueString>
+            </foaf:Organization>
+        </dcterms:isPartOf>
+        <dcterms:isPartOf>
+            <foaf:Group>
+                <dcrdf:valueString>MMM/RCR</dcrdf:valueString>
+            </foaf:Group>
+        </dcterms:isPartOf>
+        <foaf:phone rdf:resource="tel:303-497-8936"/>
+        <foaf:mbox rdf:resource="mailto:jaye@ucar.edu"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </rdf:Description>
+</rdf:RDF>
+<!--Metadata generated with CatMDEdit version 5.0-->

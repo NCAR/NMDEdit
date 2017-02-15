@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns:cen="http://www.cen.org/dc-spatial/"  xmlns:iaaaterms="http://purl.org/dc/IAAAterms/"  editable="true"  exclude-result-prefixes="jml"  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  xmlns:msxsl="urn:schemas-microsoft-com:xslt"  xmlns:iso="http://www.isotc211.org/19115/"  xmlns:fgdc="http://www.fgdc.gov/metadata/FGDC-STD-001-1998/"  xmlns:dc="http://purl.org/dc/elements/1.1/"  xmlns:iemsr="http://www.ukoln.ac.uk/projects/iemsr/terms/"  xmlns:dcterms="http://purl.org/dc/terms/"  xmlns:jml="jml"  fileID="1a7f8a49-1bdc-4f85-8b11-dd16c7558ad2" xml:lang="es">
+ <dc:identifier>iso</dc:identifier>
+ <dc:title>ISO 19115</dc:title>
+ <dc:type>standard</dc:type>
+ <dc:description>Estandar ISO</dc:description>
+ <dc:creator>Sergio</dc:creator>
+ <dc:date>2006-06-07</dc:date>
+ 
+ <dcterms:isRequiredBy>data</dcterms:isRequiredBy>
+
+ 
+ <dc:format>name=ISO 19115_old XML;format=xml;type=E;header=&lt;\?xml[^&gt;]*&gt;.*&lt;MD_Metadata&gt;.*</dc:format>
+ 
+ <dc:format>name=ISO 19115 XML;format=xml;type=ES;default=1;header=&lt;\?xml[^&gt;]*&gt;.*&lt;gmd:MD_Metadata\s[^&gt;]*&gt;.*</dc:format>
+ <dc:format>name=ISO Excel;format=xls;type=ES;header=EXCEL</dc:format>
+
+ <dc:format>name=ISO HTML (en);format=html;type=S</dc:format>
+ <dc:format>name=ISO HTML (es);format=html;type=S</dc:format>
+ <dc:format>name=ISO HTML (fr);format=html;type=S</dc:format>
+ <dc:format>name=ISO HTML (pl);format=html;type=S</dc:format>
+ <dc:format>name=ISO HTML (pt);format=html;type=S</dc:format>
+ <dc:format>name=ISO HTML (MIGRA);format=html;type=S</dc:format>
+ 
+ <dc:format>name=MARC21 ISO2709 (.mrc);format=mrc;type=ES;header=[0-9][0-9][0-9][0-9][0-9](a|c|d|n|p)(a|c|d|e|f|g|i|j|k|m|o|p|r|t)(a|b|c|d|i|m|s).*</dc:format>
+ <dc:format>name=MARC21 (.txt);format=txt;type=ES;header=[^&gt;]*\n([L|l][D|d][R|r].*(\s)+(\n)+)?(\.?[0-9][0-9][0-9]\.?.*\n+)+.*</dc:format>
+ <dc:format>name=MARC21 MARCXML (.xml);format=xml;type=ES;header=&lt;\?xml[^&gt;]*&gt;.*&lt;([^:]:)?(collection|record)\s[^&gt;]*&gt;.*</dc:format>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO 19115 XML;step1=metadataConversor.MetadataConversor[]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO Excel;step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl];step2=metadataConversor.ExpExcelMetadataConversor[]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO Excel;dest=iso::ISO 19115 XML;step1=metadataConversor.ImpExcelMetadataConversor[];step2=metadataConversor.Iso19139MetadataConversor[hoja=deleteEmptyNodes.xsl];step3=metadataConversor.Iso19139MetadataConversor[hoja=ISO19115_ISO19139.xsl]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115_old XML;dest=iso::ISO 19115 XML;step1=metadataConversor.Iso19139MetadataConversor[hoja=deleteEmptyNodes.xsl];step2=metadataConversor.Iso19139MetadataConversor[hoja=ISO19115_ISO19139.xsl]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO 19115_old XML;step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=fgdc::FGDC XML;step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl];step2=metadataConversor.MetadataConversor[hoja=ISO_FGDC.xsl]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115_old XML;dest=fgdc::FGDC XML;step1=metadataConversor.MetadataConversor[hoja=ISO_FGDC.xsl]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=dc:dcspatial:XML (OGC CSW);step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl];step2=metadataConversor.MetadataConversor[hoja=iso19115_dcspatial.xsl];step3=metadataConversor.MetadataConversor[hoja=spatialdc_qualifieddc.xsl];step4=metadataConversor.MetadataConversor[hoja=DC_Full.xsl]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=dc:dcspatial:XML (Dublin Core - RDF);step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl];step2=metadataConversor.MetadataConversor[hoja=iso19115_dcspatial.xsl];step3=metadataConversor.MetadataConversor[hoja=spatialdc_qualifieddc.xsl];step4=metadataConversor.MetadataConversor[hoja=DC_Full.xsl];step5=metadataConversor.MetadataConversor[hoja=CSW-RDF.xsl]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115_old XML;dest=dc:dcspatial:XML (Dublin Core - RDF);step1=metadataConversor.MetadataConversor[hoja=iso19115_dcspatial.xsl];step2=metadataConversor.MetadataConversor[hoja=spatialdc_qualifieddc.xsl];step3=metadataConversor.MetadataConversor[hoja=DC_Full.xsl];step4=metadataConversor.MetadataConversor[hoja=CSW-RDF.xsl]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (en);step1=metadataConversor.HTMLMetadataConversor[hoja=XML_HTML.xsl,xml=ISO19139_elements_en.xml,css=HTML_TEIDE_style.css,titlePath=gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (es);step1=metadataConversor.HTMLMetadataConversor[hoja=XML_HTML.xsl,xml=ISO19139_elements_es.xml,css=HTML_TEIDE_style.css,titlePath=gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (fr);step1=metadataConversor.HTMLMetadataConversor[hoja=XML_HTML.xsl,xml=ISO19139_elements_fr.xml,css=HTML_TEIDE_style.css,titlePath=gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (pl);step1=metadataConversor.HTMLMetadataConversor[hoja=XML_HTML.xsl,xml=ISO19139_elements_pl.xml,css=HTML_TEIDE_style.css,titlePath=gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (pt);step1=metadataConversor.HTMLMetadataConversor[hoja=XML_HTML.xsl,xml=ISO19139_elements_pt.xml,css=HTML_TEIDE_style.css,titlePath=gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO HTML (MIGRA);step1=metadataConversor.Iso19139MetadataConversor[hoja=ISO19139_ISO19115.xsl];step2=metadataConversor.MetadataConversor[hoja=ISO_MIGRA_ES.xsl]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=MARC21 ISO2709 (.mrc);dest=iso::ISO 19115 XML;step1=metadataConversor.ImpMarc21MetadataConversor[]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=MARC21 (.txt);dest=iso::ISO 19115 XML;step1=metadataConversor.ImpMarc21MetadataConversor[]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=MARC21 MARCXML (.xml);dest=iso::ISO 19115 XML;step1=metadataConversor.ImpMarc21MetadataConversor[]</dcterms:conformsTo>
+ 
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::MARC21 ISO2709 (.mrc);step1=metadataConversor.ExpMarc21MetadataConversor[]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::MARC21 (.txt);step1=metadataConversor.ExpMarc21MetadataConversor[format=MARC ETIQUETADO]</dcterms:conformsTo>
+ <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::MARC21 MARCXML (.xml);step1=metadataConversor.ExpMarc21MetadataConversor[format=MARCXML]</dcterms:conformsTo>
+ 
+ <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionHTML.HtmlMetadataEditor[summary=true]</dcterms:isFormatOf>
+ <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionGeneric.GenericMetadataEditor[GUIFile=www_isotc211_org_2005_gmd_MD_Metadata,editorName=Expert Mode,allowUnknowns=false]</dcterms:isFormatOf>
+ <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionGeneric.GenericMetadataEditor[GUIFile=www_isotc211_org_2005_gmd_MD_Metadata,editorName=NCAR Dialect,allowUnknowns=false]</dcterms:isFormatOf>
+ <dcterms:isFormatOf>parser=recordManager.MetadataParserISO19139</dcterms:isFormatOf>
+ <dcterms:isFormatOf>model=metadataManager.metadataModel.metadataModelGeneric.GenericMetadataModel</dcterms:isFormatOf>
+</schemadc> 
