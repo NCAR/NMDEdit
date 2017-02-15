@@ -31,12 +31,12 @@ sleep 2
 cp contact/*.rdf $catBase/repository/contact
 echo "copied contact/*.rdf to $catBase/repository/contact"
 sleep 2
-cp -f CSDGM_FormatNameCode.dat $catBase/repository/thesaurus
-echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
-sleep 2
-cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
-echo "copied  CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
-sleep 2
+# cp -f CSDGM_FormatNameCode.dat $catBase/repository/thesaurus
+# echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
+# sleep 2
+# cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
+# echo "copied  CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
+# sleep 2
 cp "ResourceType.dat" $catBase/repository/thesaurus
 echo "copied ResourceType.dat to $catBase/repository/thesaurus"
 sleep 2
