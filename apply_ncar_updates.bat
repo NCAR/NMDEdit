@@ -21,12 +21,12 @@ REM copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesa
 copy ResourceType.dat "%catBase%\repository\thesaurus"
 copy md_ResourceTypeCode_en.xml "%catBase%\repository\thesaurus"
 copy metadata\*.xml "%catBase%\repository\metadata"
-copy /Y catmdedit-5.0.0.jar "%catBase%\lib"
-copy "%catBase%\CatMDEdit.bat %catBase%\startup.bat"
+copy /Y catmdedit-5.0.jar "%catBase%\lib"
+ren "%catBase%\CatMDEdit.bat %catBase%\N-MD1.bat"
 @echo off
 echo "N-MD1 is now ready to use"
 REM cd "%catBase%"
-echo "To start, browse to the installation directory (%catBase) and double click on the startup file" 
+echo "To start, browse to the installation directory (%catBase) and double click on the N-MD1 file" 
 REM echo "done"
 echo.
 pause

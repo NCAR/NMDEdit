@@ -46,7 +46,7 @@ sleep 2
 copy metadata/*.xml "$catBase/repository/metadata"
 echo "copied 2 example metadata files to the metadata repository"
 sleep 2
-cp -f catmdedit-5.0.0.jar "$catBase/lib"
+cp -f catmdedit-5.0.jar "$catBase/lib"
 echo "copied catmdedit-5.0.0.jar to $catBase/lib"
 sleep 2
 chmod 754 "$catBase/CatMDEdit.sh"
