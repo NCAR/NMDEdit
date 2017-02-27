@@ -7,7 +7,7 @@
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/dw/Applications/CatMDEdit):"
 read catBase
-echo "We will be updating files within the  $catBase installation directory"
+echo "We will be updating files within the $catBase installation directory"
 echo ""
 read -p "Press enter to continue"
 cp -r "Expert Mode" "$catBase/template/genericEditor/gui/Expert Mode"
@@ -43,5 +43,13 @@ sleep 2
 cp md_ResourceTypeCode_en.xml $catBase/repository/thesaurus
 echo "copied md_ResourceTypeCode_en.xml to $catBase/repository/thesaurus"
 sleep 2
-echo "done"
+cp -f catmdedit-5.0.0.jar "$catBase/lib"
+echo "copied catmdedit-5.0.0.jar to $catBase/lib"
+sleep 2
+chmod 754 "$catBase/CatMDEdit.sh"
+cp "$catBase/CatMDEdit.sh $catBase/startup.sh"
+echo "N-MD1 is now ready to use"
+cd "$catBase"
+echo "To start, type startup.sh in the terminal window" 
+#echo "done"
 echo ""

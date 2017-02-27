@@ -20,8 +20,13 @@ REM copy /Y CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
 REM copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
 copy ResourceType.dat "%catBase%\repository\thesaurus"
 copy md_ResourceTypeCode_en.xml "%catBase%\repository\thesaurus"
+copy /Y catmdedit-5.0.0.jar "%catBase%\lib"
+copy "%catBase%\CatMDEdit.bat %catBase%\startup.sh"
 @echo off
-echo "done"
+echo "N-MD1 is now ready to use"
+cd "%catBase%"
+echo "To start, type startup.sh in the terminal window" 
+#echo "done"
 echo.
 pause
 
