@@ -43,7 +43,7 @@ sleep 2
 cp md_ResourceTypeCode_en.xml $catBase/repository/thesaurus
 echo "copied md_ResourceTypeCode_en.xml to $catBase/repository/thesaurus"
 sleep 2
-copy metadata/*.xml "$catBase/repository/metadata"
+cp metadata/*.xml "$catBase/repository/metadata"
 echo "copied 2 example metadata files to the metadata repository"
 sleep 2
 cp -f catmdedit-5.0.jar "$catBase/lib"
