@@ -9,8 +9,8 @@ set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\Use
 echo "We will be updating files within the  "%catBase% installation directory"
 pause
 @echo on
-xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode"
-xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect"
+xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
+xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 copy /Y iso19115.xml "%catBase%\repository\standards"
 copy Default.theme "%catBase%"
 copy /Y internat.properties "%catBase%"
