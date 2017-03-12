@@ -6,7 +6,7 @@ REM # Run this after installing CatMDEdit
 REM #####################################################
 echo.
 set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\Users\dw\Desktop\CatMDEdit):  
-echo "We will be updating files within the  "%catBase% installation directory"
+echo "We will be updating files within the %catBase% installation directory"
 pause
 @echo on
 xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
