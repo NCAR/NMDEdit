@@ -50,8 +50,8 @@ sleep 2
 chmod 754 "$catBase/CatMDEdit.sh"
 echo "set permissions on CatMDEdit.sh"
 cp "$catBase/CatMDEdit.sh" "$catBase/startup.sh"
-echo "created startup.sh script to start N-MD1"
-echo "N-MD1 is now ready to use"
+echo "created startup.sh script to start NMDEdit"
+echo "NMDEdit is now ready to use"
 cd "$catBase"
 echo "To start, type ./startup.sh in the terminal window" 
 sleep 2

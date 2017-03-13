@@ -1,3 +1,3 @@
-# N-MD1
+# NMDEdit
 
 Download the files to configure CatMDEdit for NCAR use.
