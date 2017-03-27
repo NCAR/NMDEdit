@@ -1,6 +1,6 @@
 # NMDEdit
 
-###Files to configure the CatMDEdit metadata editor to NMDEdit, a version in 
+### Files to configure the CatMDEdit metadata editor to NMDEdit, a version in 
 use by the National Center for Atmospheric Research (NCAR) for creating
 metadata in the NCAR dialect.
 
