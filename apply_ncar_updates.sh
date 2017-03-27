@@ -58,6 +58,9 @@ sleep 2
 cp ncar_highres_transparent.png "$catBase/doc/about/about_files"
 echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
 sleep 2
+cp ncar_metatata_template___eng.xml "$catBase/repository/templates"
+echo "copied ncar_metatata_template___eng.xml to $catBase/repository/templates"
+sleep 2
 cp startup.sh "$catBase"
 chmod 754 "$catBase/CatMDEdit.sh" "$catBase/startup.sh"
 echo "created startup.sh script to start NMDEdit"

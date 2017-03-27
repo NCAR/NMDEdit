@@ -25,6 +25,7 @@ copy NMDEdit.launch "%catBase%"
 copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"
 copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
+copy ncar_metatata_template___eng.xml "%catBase%\repository\templates"
 copy NMDEdit.bat "%catBase%"
 @echo off
 echo "NMDEdit is now ready to use"
