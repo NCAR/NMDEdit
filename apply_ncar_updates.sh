@@ -36,6 +36,9 @@ sleep 2
 cp -f splash_Cat_5.0_NMDEdit.jpg $catBase/imagen/generalIcons
 echo "copied  splash_Cat_5.0_NMDEdit.jpg to $catBase/imagen/generalIcons"
 sleep 2
+cp -f icons.properties $catBase  
+echo "copied icons.properties to $catBase"
+sleep 2
 cp contact/*.rdf $catBase/repository/contact
 echo "copied contact/*.rdf to $catBase/repository/contact"
 sleep 2
