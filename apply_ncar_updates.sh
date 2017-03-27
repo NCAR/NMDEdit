@@ -7,6 +7,14 @@
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/dw/Applications/CatMDEdit):"
 read catBase
+if [ -d $catBase ] 
+    then echo "directory $catBase exists"
+else echo "the $catBase directory does not exist"; exit 1
+fi
+if [ -w $catBase ]
+    then echo "and it is writable"
+else echo "but it is not writable"; exit 1
+fi
 echo "We will be updating files within the $catBase installation directory"
 echo ""
 read -p "Press enter to continue"
