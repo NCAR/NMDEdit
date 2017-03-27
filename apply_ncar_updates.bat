@@ -14,14 +14,18 @@ xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 copy /Y iso19115.xml "%catBase%\repository\standards"
 copy Default.theme "%catBase%"
 copy /Y internat.properties "%catBase%"
-copy /Y splash_es_ES_5.0_KitCSG.jpg "%catBase%\imagen\generalIcons"
+copy /Y splash_Cat_5.0_NMDEdit.jpg "%catBase%\imagen\generalIcons"
 xcopy .\contact "%catBase%\repository\contact"
 REM copy /Y CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
 REM copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
 copy ResourceType.dat "%catBase%\repository\thesaurus"
 copy md_ResourceTypeCode_en.xml "%catBase%\repository\thesaurus"
-copy /Y catmdedit-5.0.jar "%catBase%\lib"
-ren "%catBase%\CatMDEdit.bat" NMDEdit.bat
+copy /Y catmdedit-5.1.jar "%catBase%\lib"
+copy NMDEdit.launch "%catBase%"
+copy NMDEdit.properties "%catBase%"
+copy about.html "%catBase%\doc\about"
+copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
+copy NMDEdit.bat "%catBase%"
 @echo off
 echo "NMDEdit is now ready to use"
 echo.
