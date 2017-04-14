@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thesaurusdc xmlns:iso="http://www.isotc211.org/19115/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" fileID="de20cd96-a490-43a0-ae49-30021519068d" xml:lang="en">
+ <dc:title>Resource Type</dc:title>
+ <dc:title>Resource Type</dc:title>
+ <dcterms:alternative>ResourceType</dcterms:alternative>
+ <dc:creator>DataCite</dc:creator>
+ <dc:description>Controlled list of types of assets. </dc:description>
+ <dc:description>Lista controlada de tipos de activos.</dc:description>
+ <dc:publisher>National Center for Atmospheric Research/EOL from DataCite list.</dc:publisher>
+ <dcterms:created>2016-06-14</dcterms:created>
+ <dcterms:issued>2017-02-02</dcterms:issued>
+ <dcterms:modified>2017-04-09</dcterms:modified>
+ <dc:type>THEME</dc:type>
+ <dc:type>Ascii text.</dc:type>
+ <dc:format>text list</dc:format>
+ <dc:identifier>http://www.eol.ucar.edu/thesaurus/ResourceTypeNameCode</dc:identifier>
+ <dc:language>en</dc:language>
+ <dc:language>es</dc:language>
+ <iso:MD_Metadata.contact>National Center for Atmospheric Research
+Earth Observing Laboratory
+3450 Mitchell Lane, Bldg 1
+Boulder, CO 80301
+https://www.eol.ucar.edu</iso:MD_Metadata.contact>
+</thesaurusdc>

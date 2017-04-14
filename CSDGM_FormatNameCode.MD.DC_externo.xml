@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thesaurusdc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:iaaaterm="http://iaaa.cps.unizar.es/iaaaterms/" xmlns:iso="http://www.isotc211.org/19115/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fileID="CSDGM_FormatNameCode" xml:lang="es">
+ <dc:title xml:lang="es">Lista de tipos de formatos</dc:title>
+ <dc:title xml:lang="en">Format type list</dc:title>
+ <dcterms:alternative>CSDGM_FormatNameCode</dcterms:alternative>
+ <dc:creator>University of Zaragoza. Advanced Information Systems Group</dc:creator>
+ <dc:description xml:lang="es">Lista controlada de formatos de ficheros digitales. Tiene su punto de partida en la lista propuesta por el CSDGM y luego se añadieron más términos para completarla.</dc:description>
+ <dc:description xml:lang="en">Controlled list about digital file formats. It started from the list provided by the CSDGM and then more terms were added for complete it</dc:description>
+ <dc:publisher>University of Zaragoza. Advanced Information Systems Group</dc:publisher>
+ <dc:date>2008-12-18</dc:date>
+ <dc:type>OTHER</dc:type>
+ <dc:type>TEXTO.MATERIALES DE REFERENCIA.TESAUROS</dc:type>
+ <dc:format>SKOS RDF Vocabularies (http://www.w3.org/2004/02/skos)</dc:format>
+ <dc:identifier>http://iaaa.cps.unizar.es/thesaurus/CSDGM_FormatNameCode</dc:identifier>
+ 
+ 
+ 
+ 
+ 
+ <dc:rights>Copyright</dc:rights>
+ <iso:MD_Metadata.contact>University of Zaragoza
+	Computer Science and Systems Engineering Department
+	Advanced Information Systems Laboratory (IAAA)
+	María de Luna, 1 E-50018 Zaragoza. (Spain)
+	Phone: (34) 976 762134 Fax: (34) 976 761914
+	iaaa@unizar.es
+	http://iaaa.cps.unizar.es/</iso:MD_Metadata.contact>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+<dc:language>es</dc:language>
+  <dc:language>pt</dc:language>
+  <dc:language>en</dc:language>
+  <dc:language>pl</dc:language>
+  <dc:language>fr</dc:language>
+</thesaurusdc>
