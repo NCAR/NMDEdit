@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:gts="http://www.isotc211.org/2005/gts/" xmlns:iaaacl="http://iaaa.cps.unizar.es/ControlledList/" xmlns:gmd="http://www.isotc211.org/2005/gmd/" xmlns:gco="http://www.isotc211.org/2005/gco/" xmlns:void="http://iaaa.cps.unizar.es/void/" xmlns:xlink="http://www.w3.org/1999/xlink/" xmlns:gml="http://www.opengis.net/gml/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" namespace="gmd" tipomd="EX_TemporalExtent" description_es="Periodo de tiempo cubierto por el contenido del  conjunto de datos." description_en="time period covered by the content of the dataset." description_pl="przedzial czasowy objety zawartoscia zbioru danych." description_pt="Período de tempo coberto pelo conteúdo do conjunto de dados." label_es="Extensión temporal" label_en="EX_TemporalExtent" label_fr="EX_Durée" label_pl="ZG_ZasiegCzasowy" label_pt="EX_Extensão Temporal" number="350.0">
+    <singleComplex hidden="false" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/mandatory" element_prefix="gmd" element_name="extent" element_namespace="http://www.isotc211.org/2005/gmd/" number="351" label_es="Extensión" label_fr="Emprise" label_en="Extent" label_pl="Zasieg" label_pt="Extensão" description_es="Fecha y  tiempo  para el conjunto de datos." description_fr="null" description_en="date and time for the content of the dataset." description_pl="data i czas dla zawartosci zbioru danych." description_pt="Data e tempo para o conjunto de dados." condition_es="null" condition_fr="null" condition_en="null" condition_pl="null" condition_pt="null" example_es="null" example_fr="null" example_en="null" example_pl="null" example_pt="null">
+        <lista>
+            <option value="http://www.opengis.net/gml/TimePeriod" label_pt="Período de tempo" label_pl="Okres" label_fr="Période de temps" label_en="Time period" label_es="Periodo de tiempo" description_en="TimePeriod"/>
+            <option value="http://www.opengis.net/gml/TimeInstant" label_pt="Time instant" label_pl="Moment" label_fr="Instant de temps" label_en="Time instant" label_es="Instante de tiempo" description_en="TimeInstant"/>
+            <option value="http://www.opengis.net/gml/TimeEdge" label_en="Time Edge" description_en="TimeEdge"/>
+            <option value="http://www.opengis.net/gml/TimeNode" label_en="Time Node" description_en="TimeNode"/>
+        </lista>
+        <attributes/>
+    </singleComplex>
+</object>

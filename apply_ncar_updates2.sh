@@ -20,7 +20,6 @@ fi
 echo "We will be updating files within the $catBase installation directory"
 echo ""
 cp -r "Expert Mode" "$catBase/template/genericEditor/gui/Expert Mode"
-echo "copied Expert Mode directory to $catBase/template/genericEditor/gui/Expert Mode"
 sleep 2
 cp -r "NCAR Dialect" "$catBase/template/genericEditor/gui/NCAR Dialect"
 echo "copied NCAR Dialect directory to $catBase/template/genericEditor/gui/NCAR Dialect"
