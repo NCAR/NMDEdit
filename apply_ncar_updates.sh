@@ -46,20 +46,26 @@ sleep 2
 cp contact/*.rdf $catBase/repository/contact
 echo "copied contact/*.rdf to $catBase/repository/contact"
 sleep 2
-# cp -f CSDGM_FormatNameCode.dat $catBase/repository/thesaurus
-# echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
-# sleep 2
-# cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
-# echo "copied  CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
-# sleep 2
-cp "ResourceType.dat" $catBase/repository/thesaurus
-echo "copied ResourceType.dat to $catBase/repository/thesaurus"
+cp -f CSDGM_FormatNameCode.dat $catBase/repository/thesaurus
+echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
 sleep 2
-cp md_ResourceTypeCode_en.xml $catBase/repository/thesaurus
-echo "copied md_ResourceTypeCode_en.xml to $catBase/repository/thesaurus"
+cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
+echo "copied CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
 sleep 2
-cp -f catmdedit-5.1.jar "$catBase/lib"
-echo "copied catmdedit-5.1.jar to $catBase/lib"
+cp -f GCMD.dat $catBase/repository/thesaurus
+echo "copied GCMD.dat to $catBase/repository/thesaurus"
+sleep 2
+cp -f GCMD.MD.DC.xml $catBase/repository/thesaurus
+echo "copied GCMD.MD.DC.xml to $catBase/repository/thesaurus"
+sleep 2
+cp "ResourceTypeNameCode.dat" $catBase/repository/thesaurus
+echo "copied ResourceTypeNameCode.dat to $catBase/repository/thesaurus"
+sleep 2
+cp ResourceType.MD.DC.xml $catBase/repository/thesaurus
+echo "copied ResourceType.MD.DC.xml to $catBase/repository/thesaurus"
+sleep 2
+cp -f catmdedit-5.2.0.jar "$catBase/lib"
+echo "copied catmdedit-5.2.0.jar to $catBase/lib"
 sleep 2
 cp NMDEdit.launch "$catBase"
 echo "copied NMDEdit.launch to $catBase"
@@ -75,6 +81,9 @@ echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
 sleep 2
 cp ncar_metatata_template___eng.xml "$catBase/repository/templates"
 echo "copied ncar_metatata_template___eng.xml to $catBase/repository/templates"
+sleep 2
+cp FAST_Template.xml "$catBase/repository/templates"
+echo "copied FAST_Template.xml to $catBase/repository/templates"
 sleep 2
 cp startup.sh "$catBase"
 chmod 754 "$catBase/CatMDEdit.sh" "$catBase/startup.sh"

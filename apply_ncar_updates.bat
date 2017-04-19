@@ -21,9 +21,11 @@ copy /Y icons.properties "%catBase%"
 xcopy .\contact "%catBase%\repository\contact"
 copy /Y CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
 copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
+copy /Y GCMD.dat "%catBase%\repository\thesaurus"^M
+copy /Y "GCMD.MD.DC.xml" "%catBase%\repository\thesaurus"^M
 copy ResourceTypeNameCode.dat "%catBase%\repository\thesaurus"
 copy ResourceType.MD.DC.xml "%catBase%\repository\thesaurus"
-copy /Y catmdedit-5.2.0.jar "%catBase%\lib"
+copy catmdedit-5.2.0.jar "%catBase%\lib"
 copy NMDEdit.launch "%catBase%"
 copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"
