@@ -25,7 +25,7 @@ copy /Y GCMD.dat "%catBase%\repository\thesaurus"^M
 copy /Y "GCMD.MD.DC.xml" "%catBase%\repository\thesaurus"^M
 copy ResourceTypeNameCode.dat "%catBase%\repository\thesaurus"
 copy ResourceType.MD.DC.xml "%catBase%\repository\thesaurus"
-copy catmdedit-5.2.0.jar "%catBase%\lib"
+copy nmdedit-5.2.0.jar "%catBase%\lib"
 copy NMDEdit.launch "%catBase%"
 copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"

@@ -64,8 +64,8 @@ sleep 2
 cp ResourceType.MD.DC.xml $catBase/repository/thesaurus
 echo "copied ResourceType.MD.DC.xml to $catBase/repository/thesaurus"
 sleep 2
-cp -f catmdedit-5.2.0.jar "$catBase/lib"
-echo "copied catmdedit-5.2.0.jar to $catBase/lib"
+cp -f nmdedit-5.2.0.jar "$catBase/lib"
+echo "copied nmdedit-5.2.0.jar to $catBase/lib"
 sleep 2
 cp NMDEdit.launch "$catBase"
 echo "copied NMDEdit.launch to $catBase"
