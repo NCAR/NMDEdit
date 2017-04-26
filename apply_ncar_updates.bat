@@ -1,4 +1,8 @@
 @echo off 
+echo ""
+echo "Warning: updates to files are not complete."
+echo ""
+exit 
 REM #####################################################
 REM # Applies NCAR-specific configurations to CatMDEdit,
 REM # updating thesauri and adding our Contacts list. 

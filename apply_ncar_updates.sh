@@ -1,4 +1,8 @@
 #!/bin/bash
+echo ""
+echo "Warning: updates to files are not complete."
+echo ""
+exit 
 #####################################################
 # Applies NCAR-specific configurations to CatMDEdit
 # updating thesauri and adding our Contacts list. 
