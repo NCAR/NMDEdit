@@ -1,7 +1,6 @@
 # NMDEdit
 
-!! WARNING: This is version 5.1.1 and files are in process of being updated. The 
-application could be unstable until the updates are completed. 
+Version 5.2.0
 
 Files to configure the CatMDEdit metadata editor to NMDEdit, a version in 
 use by the National Center for Atmospheric Research (NCAR) for creating

@@ -1,8 +1,4 @@
 #!/bin/bash
-echo ""
-echo "Warning: updates to files are not complete."
-echo ""
-exit 
 #####################################################
 # Applies NCAR-specific configurations to CatMDEdit
 # updating thesauri and adding our Contacts list. 
@@ -21,7 +17,7 @@ if [ -w $catBase ]
 else echo "but it is not writable"
 read -p "Press enter to continue, or CTRL-C to quit"
 fi
-echo "We will be updating files within the $catBase installation directory"
+echo "Files within the $catBase installation directory will be updated"
 echo ""
 cp -r "Expert Mode" "$catBase/template/genericEditor/gui/Expert Mode"
 echo "copied Expert Mode directory to $catBase/template/genericEditor/gui/Expert Mode"
@@ -55,12 +51,6 @@ echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
 sleep 2
 cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
 echo "copied CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
-sleep 2
-cp -f GCMD.dat $catBase/repository/thesaurus
-echo "copied GCMD.dat to $catBase/repository/thesaurus"
-sleep 2
-cp -f GCMD.MD.DC.xml $catBase/repository/thesaurus
-echo "copied GCMD.MD.DC.xml to $catBase/repository/thesaurus"
 sleep 2
 cp "ResourceTypeNameCode.dat" $catBase/repository/thesaurus
 echo "copied ResourceTypeNameCode.dat to $catBase/repository/thesaurus"
