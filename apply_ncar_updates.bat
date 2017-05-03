@@ -30,8 +30,10 @@ copy about.html "%catBase%\doc\about"
 copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
 copy ncar_metatata_template___eng.xml "%catBase%\repository\templates" 
 copy FAST_Template.xml "%catBase%\repository\templates" 
-copy sample_XML/*.xml "%catBase%\repository\metadata"
+del "%catBase%\repository\metadata\*.xml"
+copy sample_XML\*.xml "%catBase%\repository\metadata"
 copy NMDEdit.bat "%catBase%"
+cd "%catBase%"
 @echo off
 echo "NMDEdit is now ready to use"
 echo. 

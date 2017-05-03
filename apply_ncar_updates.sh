@@ -82,11 +82,13 @@ sleep 2
 cp startup.sh "$catBase"
 chmod 754 "$catBase/CatMDEdit.sh" "$catBase/startup.sh"
 echo "created startup.sh script to start NMDEdit"
-echo "set permissions on CatMDEdit.sh and startup.sh"
+echo "and set permissions on CatMDEdit.sh and startup.sh"
 sleep 2
-echo "NMDEdit is now ready to use"
+del "$catBase/repository/metadata/*.xml"
+copy sample_XML/*.xml "$catBase/repository/metadata"
 cd "$catBase"
-echo "To start, type ./startup.sh in the terminal window" 
+echo "NMDEdit is now ready to use"
+echo "To start, type ./startup.sh in the terminal window in the installation directory" 
 sleep 2
 #echo "done"
 echo ""
