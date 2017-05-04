@@ -23,7 +23,7 @@ copy /Y CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
 copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
 copy ResourceTypeNameCode.dat "%catBase%\repository\thesaurus"
 copy ResourceType.MD.DC.xml "%catBase%\repository\thesaurus"
-copy nmdedit-5.2.0.jar "%catBase%\lib"
+copy /Y nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy NMDEdit.launch "%catBase%"
 copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"
@@ -32,13 +32,10 @@ copy ncar_metatata_template___eng.xml "%catBase%\repository\templates"
 copy FAST_Template.xml "%catBase%\repository\templates" 
 del "%catBase%\repository\metadata\*.xml"
 copy sample_XML\*.xml "%catBase%\repository\metadata"
-copy NMDEdit.bat "%catBase%"
-cd "%catBase%"
+ren "%catBase%\CatMDEdit.bat" "NMDEdit.bat"
 @echo off
 echo "NMDEdit is now ready to use"
 echo. 
-echo "To start, double click on the NMDEdit batch file in the install directory." 
-REM echo "done"
 echo.
 pause
 
