@@ -8,11 +8,11 @@
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/dw/Applications/CatMDEdit):"
 read catBase
-if [ -d $catBase ] 
+if [ -d "$catBase" ] 
     then echo "directory $catBase exists"
 else echo "the $catBase directory does not exist"; exit 1
 fi
-if [ -w $catBase ]
+if [ -w "$catBase" ]
     then echo "and it is writable"
 else echo "but it is not writable"
 read -p "Press enter to continue, or CTRL-C to quit"
@@ -28,35 +28,35 @@ sleep 2
 cp -r "FAST" "$catBase/template/genericEditor/gui/FAST"
 echo "copied FAST directory to $catBase/template/genericEditor/gui/FAST"
 sleep 2
-cp -f iso19115.xml $catBase/repository/standards
+cp -f iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
 sleep 2
-cp Default.theme $catBase
+cp Default.theme "$catBase"
 echo "copied Default.theme to $catBase"
 sleep 2
-cp -f internat.properties $catBase
+cp -f internat.properties "$catBase"
 echo "copied internat.properties to $catBase"
 sleep 2
-cp -f splash_Cat_5.0_NMDEdit.jpg $catBase/imagen/generalIcons
+cp -f splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
 echo "copied  splash_Cat_5.0_NMDEdit.jpg to $catBase/imagen/generalIcons"
 sleep 2
-cp -f icons.properties $catBase  
+cp -f icons.properties "$catBase"  
 echo "copied icons.properties to $catBase"
 sleep 2
-cp contact/*.rdf $catBase/repository/contact
+cp contact/*.rdf "$catBase/repository/contact"
 echo "copied contact/*.rdf to $catBase/repository/contact"
 sleep 2
-cp -f CSDGM_FormatNameCode.dat $catBase/repository/thesaurus
+cp -f CSDGM_FormatNameCode.dat "$catBase/repository/thesaurus"
 echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
 sleep 2
-cp -f CSDGM_FormatNameCode.MD.DC_externo.xml $catBase/repository/thesaurus
+cp -f CSDGM_FormatNameCode.MD.DC_externo.xml "$catBase/repository/thesaurus"
 echo "copied CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
 sleep 2
-cp "ResourceTypeNameCode.dat" $catBase/repository/thesaurus
-echo "copied ResourceTypeNameCode.dat to $catBase/repository/thesaurus"
+cp "Resource Type.dat" "$catBase/repository/thesaurus"
+echo "copied Resource Type.dat to $catBase/repository/thesaurus"
 sleep 2
-cp ResourceType.MD.DC.xml $catBase/repository/thesaurus
-echo "copied ResourceType.MD.DC.xml to $catBase/repository/thesaurus"
+cp "md_Resource Type_en.xml" "$catBase/repository/thesaurus"
+echo "copied md_Resource Type_en.xml to $catBase/repository/thesaurus"
 sleep 2
 cp -f nmdedit-5.2.0.jar "$catBase/lib"
 echo "copied nmdedit-5.2.0.jar to $catBase/lib"
