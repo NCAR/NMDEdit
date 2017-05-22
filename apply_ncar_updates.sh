@@ -6,7 +6,7 @@
 #   updated for ver.5.2.0 
 #####################################################
 echo ""
-echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/dw/Applications/CatMDEdit):"
+echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/NMDEdit):"
 read catBase
 if [ -d "$catBase" ] 
     then echo "directory $catBase exists"
