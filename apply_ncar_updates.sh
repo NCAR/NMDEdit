@@ -132,12 +132,15 @@ rm "$catBase/repository/thesaurus/UNESCO.MD.DC.xml"
 rm "$catBase/repository/thesaurus/URBISOC_MD.DC.xml"
 rm "$catBase/repository/thesaurus/URBISOC.dat"
 rm "$catBase/repository/thesaurus/WebServicesSpecification.MD.DC.xml"
+echo "removed unnecessary thesauri"
 ###################################################################################
 # These files should be updated with latest versions to remove the Spanish titles
 ###################################################################################
 cp MARC21_Keywords.MD.DC_externo.xml "$catBase/repository/thesaurus"
 cp WebServicesSpecification.MD.DC.xml "$catBase/repository/thesaurus"
 ####################################################################################
+echo "updated 2 thesauri"
+sleep 1
 cp startup.sh "$catBase"
 rm "$catBase/CatMDEdit.sh"
 chmod 754 "$catBase/startup.sh"
