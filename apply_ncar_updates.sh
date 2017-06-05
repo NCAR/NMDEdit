@@ -150,6 +150,5 @@ sleep 2
 cd "$catBase"
 echo "NMDEdit is now ready to use"
 echo "To start, type ./startup.sh in the terminal window in the installation directory" 
-echo "  or create a shortcut on  your desktop to $catBase/startup.sh" 
 #echo "done"
 echo ""
