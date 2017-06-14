@@ -34,40 +34,35 @@ echo "copied FAST directory to $catBase/template/genericEditor/gui/FAST"
 sleep 1
 cp FAST_Template.xml "$catBase/repository/templates"
 echo "copied FAST_Template.xml to $catBase/repository/templates"
-sleep 1
+cp EOL_Template.xml "$catBase/repository/templates"
+echo "copied EOL_Template.xml to $catBase/repository/templates"
+cp RAL_Template.xml "$catBase/repository/templates"
+echo "copied RAL_Template.xml to $catBase/repository/templates"
 cp -f iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
-# sleep 1
 cp -f nmdedit-5.2.0.jar "$catBase/lib"
 echo "copied nmdedit-5.2.0.jar to $catBase/lib"
-# sleep 1
+sleep 1
 cp Default.theme "$catBase"
 echo "copied Default.theme to $catBase"
-# sleep 1
 cp -f internat.properties "$catBase"
 echo "copied internat.properties to $catBase"
-# sleep 1
 cp -f splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
 echo "copied  splash_Cat_5.0_NMDEdit.jpg to $catBase/imagen/generalIcons"
-# sleep 1
 cp -f icons.properties "$catBase"  
 echo "copied icons.properties to $catBase"
-# sleep 1
 cp NMDEdit.launch "$catBase"
 echo "copied NMDEdit.launch to $catBase"
-# sleep 1
 cp NMDEdit.properties "$catBase"
 echo "copied NMDEdit.properties to $catBase"
-# sleep 1
 cp about.html "$catBase/doc/about"
 echo "copied about.html to $catBase/doc/about"
-# sleep 1
 cp ncar_highres_transparent.png "$catBase/doc/about/about_files"
 echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
-# sleep 1
+cp -f gmxCodelists.xml "$catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
+echo "copied gmxCodelists.xml to $catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
 cp ncar_metatata_template___eng.xml "$catBase/repository/templates"
 echo "copied ncar_metatata_template___eng.xml to $catBase/repository/templates"
-# sleep 1
 ###########################
 # add sample XML files 
 ###########################
@@ -88,13 +83,10 @@ echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
 sleep 1
 cp -f CSDGM_FormatNameCode.MD.DC_externo.xml "$catBase/repository/thesaurus"
 echo "copied CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
-sleep 1
 cp "Resource Type.dat" "$catBase/repository/thesaurus"
 echo "copied Resource Type.dat to $catBase/repository/thesaurus"
-sleep 1
 cp "md_Resource Type_en.xml" "$catBase/repository/thesaurus"
 echo "copied md_Resource Type_en.xml to $catBase/repository/thesaurus"
-sleep 1
 ###########################
 # delete unneeded thesauri
 ###########################

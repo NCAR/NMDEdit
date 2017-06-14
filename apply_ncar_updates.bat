@@ -18,6 +18,8 @@ xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 xcopy /S "FAST" "%catBase%\template\genericEditor\gui\FAST" /i
 copy FAST_Template.xml "%catBase%\repository\templates" 
+copy EOL_Template.xml "%catBase%\repository\templates" 
+copy RAL_Template.xml "%catBase%\repository\templates" 
 copy /Y iso19115.xml "%catBase%\repository\standards"
 copy /Y nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy Default.theme "%catBase%"
@@ -28,6 +30,7 @@ copy NMDEdit.launch "%catBase%"
 copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"
 copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
+copy /Y gmxCodelists.xml "%catBase%\xml\schemas\ISO_19139_Schemas\resources\Codelist"
 REM ###########################
 REM # add sample XML files 
 REM ###########################
