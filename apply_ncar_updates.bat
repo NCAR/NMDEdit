@@ -10,10 +10,10 @@ echo.
 set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\CatMDEdit): 
 echo "Files within the %catBase% installation directory will be updated"
 pause
-@echo on
 REM ###########################
 REM # add our dialects
 REM ###########################
+@echo on
 xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 xcopy /S "FAST" "%catBase%\template\genericEditor\gui\FAST" /i
@@ -31,27 +31,35 @@ copy NMDEdit.properties "%catBase%"
 copy about.html "%catBase%\doc\about"
 copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
 copy /Y gmxCodelists.xml "%catBase%\xml\schemas\ISO_19139_Schemas\resources\Codelist"
+@echo off
 REM ###########################
 REM # add sample XML files 
 REM ###########################
+@echo on
 del "%catBase%\repository\metadata\*.xml"
 copy sample_XML\*.xml "%catBase%\repository\metadata"
 copy ncar_metatata_template___eng.xml "%catBase%\repository\templates" 
+@echo off
 REM ###########################
 REM # add our NCAR contacts
 REM ###########################
+@echo on
 xcopy .\contact "%catBase%\repository\contact"
+@echo off
 REM #######################################################
 REM # fix up thesaurus directory
 REM #  add Resource Type and update CSDGM with new formats
 REM #######################################################
+@echo on
 copy /Y CSDGM_FormatNadmeCode.dat "%catBase%\repository\thesaurus"
 copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
 copy "Resource Type.dat" "%catBase%\repository\thesaurus"
 copy "md_Resource Type_en.xml" "%catBase%\repository\thesaurus"
+@echo off
 REM ###########################
 REM # delete unneeded thesauri
 REM ###########################
+@echo on
 del "%catBase%\repository\thesaurus\ADLFTT.dat"
 del "%catBase%\repository\thesaurus\ADLFTT.MD.DC.xml"
 del "%catBase%\repository\thesaurus\AGROVOC.dat"
@@ -86,12 +94,14 @@ del "%catBase%\repository\thesaurus\UNESCO.MD.DC.xml"
 del "%catBase%\repository\thesaurus\URBISOC_MD.DC.xml"
 del "%catBase%\repository\thesaurus\URBISOC.dat"
 del "%catBase%\repository\thesaurus\WebServicesSpecification.MD.DC.xml"
+@echo off
 REM ###################################################################################
 REM # These files should be updated with latest versions to remove the Spanish titles
 REM ###################################################################################
-cp /Y MARC21_Keywords.MD.DC_externo.xml "%catBase%\repository\thesaurus"
-cp /Y WebServicesSpecification.MD.DC.xml "%catBase%\repository\thesaurus"
-####################################################################################
+@echo on
+copy /Y MARC21_Keywords.MD.DC_externo.xml "%catBase%\repository\thesaurus"
+copy /Y WebServicesSpecification.MD.DC.xml "%catBase%\repository\thesaurus"
+@echo on
 ren "%catBase%\CatMDEdit.bat" "NMDEdit.bat"
 @echo off
 echo "NMDEdit is now ready to use"
