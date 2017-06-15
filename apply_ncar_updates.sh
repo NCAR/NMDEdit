@@ -4,7 +4,8 @@
 # updating thesauri and adding our Contacts list. 
 # Run this after installing CatMDEdit 
 #   updated for ver.5.2.0 
-*   added thesaurus changes - Jun 1, 2017
+#   added thesaurus changes - Jun 1, 2017
+#   rearranged files - Jun 14
 #####################################################
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/NMDEdit):"
@@ -32,40 +33,40 @@ sleep 1
 cp -r "FAST" "$catBase/template/genericEditor/gui/FAST"
 echo "copied FAST directory to $catBase/template/genericEditor/gui/FAST"
 sleep 1
-cp FAST_Template.xml "$catBase/repository/templates"
+cp files/FAST_Template.xml "$catBase/repository/templates"
 echo "copied FAST_Template.xml to $catBase/repository/templates"
-cp EOL_Template.xml "$catBase/repository/templates"
+cp files/EOL_Template.xml "$catBase/repository/templates"
 echo "copied EOL_Template.xml to $catBase/repository/templates"
-cp RAL_Template.xml "$catBase/repository/templates"
+cp files/RAL_Template.xml "$catBase/repository/templates"
 echo "copied RAL_Template.xml to $catBase/repository/templates"
-cp -f iso19115.xml "$catBase/repository/standards"
+cp -f files/iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
-cp -f nmdedit-5.2.0.jar "$catBase/lib"
+cp -f files/nmdedit-5.2.0.jar "$catBase/lib"
 echo "copied nmdedit-5.2.0.jar to $catBase/lib"
 sleep 1
-cp Default.theme "$catBase"
+cp files/Default.theme "$catBase"
 echo "copied Default.theme to $catBase"
-cp -f internat.properties "$catBase"
+cp -f files/internat.properties "$catBase"
 echo "copied internat.properties to $catBase"
-cp -f splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
+cp -f files/splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
 echo "copied  splash_Cat_5.0_NMDEdit.jpg to $catBase/imagen/generalIcons"
-cp -f icons.properties "$catBase"  
+cp -f files/icons.properties "$catBase"  
 echo "copied icons.properties to $catBase"
-cp NMDEdit.launch "$catBase"
+cp files/NMDEdit.launch "$catBase"
 echo "copied NMDEdit.launch to $catBase"
-cp NMDEdit.properties "$catBase"
+cp files/NMDEdit.properties "$catBase"
 echo "copied NMDEdit.properties to $catBase"
-cp about.html "$catBase/doc/about"
+cp files/about.html "$catBase/doc/about"
 echo "copied about.html to $catBase/doc/about"
-cp ncar_highres_transparent.png "$catBase/doc/about/about_files"
+cp files/ncar_highres_transparent.png "$catBase/doc/about/about_files"
 echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
-cp -f gmxCodelists.xml "$catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
+cp -f files/gmxCodelists.xml "$catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
 echo "copied gmxCodelists.xml to $catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
-echo "copied ncar_metatata_template___eng.xml to $catBase/repository/templates"
 ###########################
 # add sample XML files 
 ###########################
-rm "$catBase/repository/metadata/*.xml"
+rm "$catBase/repository/metadata/Servicio.xml"
+rm "$catBase/repository/metadata/Dato.xml"
 cp sample_XML/*.xml "$catBase/repository/metadata"
 ###########################
 # add our NCAR contacts
@@ -77,14 +78,14 @@ sleep 1
 # fix up thesaurus directory
 #  add Resource Type and update CSDGM with new formats
 #######################################################
-cp -f CSDGM_FormatNameCode.dat "$catBase/repository/thesaurus"
+cp -f files/CSDGM_FormatNameCode.dat "$catBase/repository/thesaurus"
 echo "copied CSDGM_FormatNameCode.dat to $catBase/repository/thesaurus"
 sleep 1
-cp -f CSDGM_FormatNameCode.MD.DC_externo.xml "$catBase/repository/thesaurus"
+cp -f files/CSDGM_FormatNameCode.MD.DC_externo.xml "$catBase/repository/thesaurus"
 echo "copied CSDGM_FormatNameCode.MD.DC_externo.xml to $catBase/repository/thesaurus"
-cp "Resource Type.dat" "$catBase/repository/thesaurus"
+cp "files/Resource Type.dat" "$catBase/repository/thesaurus"
 echo "copied Resource Type.dat to $catBase/repository/thesaurus"
-cp "md_Resource Type_en.xml" "$catBase/repository/thesaurus"
+cp "files/md_Resource Type_en.xml" "$catBase/repository/thesaurus"
 echo "copied md_Resource Type_en.xml to $catBase/repository/thesaurus"
 ###########################
 # delete unneeded thesauri
@@ -127,8 +128,8 @@ echo "removed unnecessary thesauri"
 ###################################################################################
 # These files should be updated with latest versions to remove the Spanish titles
 ###################################################################################
-cp MARC21_Keywords.MD.DC_externo.xml "$catBase/repository/thesaurus"
-cp WebServicesSpecification.MD.DC.xml "$catBase/repository/thesaurus"
+cp files/MARC21_Keywords.MD.DC_externo.xml "$catBase/repository/thesaurus"
+cp files/WebServicesSpecification.MD.DC.xml "$catBase/repository/thesaurus"
 ####################################################################################
 echo "updated 2 thesauri"
 sleep 1
@@ -140,6 +141,6 @@ echo "and set permissions on startup.sh"
 sleep 2
 cd "$catBase"
 echo "NMDEdit is now ready to use"
-echo "To start, change directories to $catBase, and type ./startup.sh in the terminal window"
+echo "To start, type ./startup.sh in the terminal window in the installation directory" 
 #echo "done"
 echo ""

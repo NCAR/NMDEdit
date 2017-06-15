@@ -4,11 +4,13 @@ REM # Applies NCAR-specific configurations to CatMDEdit,
 REM # updating thesauri and adding our Contacts list. 
 REM # Run this after installing CatMDEdit 
 REM #   updated for ver.5.2.0 
-REM #  added thesaurus changes - Jun 2, 2017
+REM #   added thesaurus changes - Jun 2, 2017
+REM #   rearranged files - Jun 14 
 REM #####################################################
 echo.
 set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\CatMDEdit): 
 echo "Files within the %catBase% installation directory will be updated"
+echo ""
 pause
 REM ###########################
 REM # add our dialects
@@ -17,20 +19,20 @@ REM ###########################
 xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 xcopy /S "FAST" "%catBase%\template\genericEditor\gui\FAST" /i
-copy FAST_Template.xml "%catBase%\repository\templates" 
-copy EOL_Template.xml "%catBase%\repository\templates" 
-copy RAL_Template.xml "%catBase%\repository\templates" 
-copy /Y iso19115.xml "%catBase%\repository\standards"
-copy /Y nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
-copy Default.theme "%catBase%"
-copy /Y internat.properties "%catBase%"
-copy /Y splash_Cat_5.0_NMDEdit.jpg "%catBase%\imagen\generalIcons"
-copy /Y icons.properties "%catBase%"  
-copy NMDEdit.launch "%catBase%"
-copy NMDEdit.properties "%catBase%"
-copy about.html "%catBase%\doc\about"
-copy ncar_highres_transparent.png "%catBase%\doc\about\about_files"
-copy /Y gmxCodelists.xml "%catBase%\xml\schemas\ISO_19139_Schemas\resources\Codelist"
+copy files\FAST_Template.xml "%catBase%\repository\templates" 
+copy files\EOL_Template.xml "%catBase%\repository\templates" 
+copy files\RAL_Template.xml "%catBase%\repository\templates" 
+copy /Y files\iso19115.xml "%catBase%\repository\standards"
+copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
+copy files\Default.theme "%catBase%"
+copy /Y files\internat.properties "%catBase%"
+copy /Y files\splash_Cat_5.0_NMDEdit.jpg "%catBase%\imagen\generalIcons"
+copy /Y files\icons.properties "%catBase%"  
+copy files\NMDEdit.launch "%catBase%"
+copy files\NMDEdit.properties "%catBase%"
+copy files\about.html "%catBase%\doc\about"
+copy files\ncar_highres_transparent.png "%catBase%\doc\about\about_files"
+copy /Y files\gmxCodelists.xml "%catBase%\xml\schemas\ISO_19139_Schemas\resources\Codelist"
 @echo off
 REM ###########################
 REM # add sample XML files 
@@ -50,15 +52,14 @@ REM # fix up thesaurus directory
 REM #  add Resource Type and update CSDGM with new formats
 REM #######################################################
 @echo on
-copy /Y CSDGM_FormatNadmeCode.dat "%catBase%\repository\thesaurus"
-copy /Y "CSDGM_FormatNameCode.MD.DC_externo.xml" "%catBase%\repository\thesaurus"
-copy "Resource Type.dat" "%catBase%\repository\thesaurus"
-copy "md_Resource Type_en.xml" "%catBase%\repository\thesaurus"
+copy /Y files\CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
+copy /Y files\CSDGM_FormatNameCode.MD.DC_externo.xml "%catBase%\repository\thesaurus"
+copy "files\Resource Type.dat" "%catBase%\repository\thesaurus"
+copy "files\md_Resource Type_en.xml" "%catBase%\repository\thesaurus"
 @echo off
 REM ###########################
 REM # delete unneeded thesauri
 REM ###########################
-@echo on
 del "%catBase%\repository\thesaurus\ADLFTT.dat"
 del "%catBase%\repository\thesaurus\ADLFTT.MD.DC.xml"
 del "%catBase%\repository\thesaurus\AGROVOC.dat"
@@ -93,13 +94,14 @@ del "%catBase%\repository\thesaurus\UNESCO.MD.DC.xml"
 del "%catBase%\repository\thesaurus\URBISOC_MD.DC.xml"
 del "%catBase%\repository\thesaurus\URBISOC.dat"
 del "%catBase%\repository\thesaurus\WebServicesSpecification.MD.DC.xml"
-@echo off
 REM ###################################################################################
 REM # These files should be updated with latest versions to remove the Spanish titles
 REM ###################################################################################
 @echo on
-copy /Y MARC21_Keywords.MD.DC_externo.xml "%catBase%\repository\thesaurus"
-copy /Y WebServicesSpecification.MD.DC.xml "%catBase%\repository\thesaurus"
+copy files\MARC21_Keywords.MD.DC_externo.xml "%catBase%\repository\thesaurus"
+copy files\WebServicesSpecification.MD.DC.xml "%catBase%\repository\thesaurus"
+@echo off
+REM ####################################################################################
 @echo on
 ren "%catBase%\CatMDEdit.bat" "NMDEdit.bat"
 @echo off
