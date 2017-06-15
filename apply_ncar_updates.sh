@@ -141,6 +141,6 @@ echo "and set permissions on startup.sh"
 sleep 2
 cd "$catBase"
 echo "NMDEdit is now ready to use"
-echo "To start, type $catBase/startup.sh in the terminal window in the installation directory"
+echo "To start, change directories to $catBase, and type ./startup.sh in the terminal window"
 #echo "done"
 echo ""
