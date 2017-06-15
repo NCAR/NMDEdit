@@ -38,7 +38,6 @@ REM ###########################
 @echo on
 del "%catBase%\repository\metadata\*.xml"
 copy sample_XML\*.xml "%catBase%\repository\metadata"
-copy ncar_metatata_template___eng.xml "%catBase%\repository\templates" 
 @echo off
 REM ###########################
 REM # add our NCAR contacts

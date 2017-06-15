@@ -61,7 +61,6 @@ cp ncar_highres_transparent.png "$catBase/doc/about/about_files"
 echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
 cp -f gmxCodelists.xml "$catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
 echo "copied gmxCodelists.xml to $catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
-cp ncar_metatata_template___eng.xml "$catBase/repository/templates"
 echo "copied ncar_metatata_template___eng.xml to $catBase/repository/templates"
 ###########################
 # add sample XML files 
