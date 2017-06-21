@@ -23,36 +23,50 @@
     <gmd:hierarchyLevelName gco:nilReason="missing"/>
     <gmd:contact>
         <gmd:CI_ResponsibleParty>
-            <gmd:individualName>
-                <gco:CharacterString>Sophie Hou</gco:CharacterString>
-            </gmd:individualName>
+            <gmd:individualName gco:nilReason="missing"/>
             <gmd:organisationName>
-                <gco:CharacterString>CISL/DSS</gco:CharacterString>
+                <gco:CharacterString>UCAR/NCAR - Earth Observing Laboratory</gco:CharacterString>
             </gmd:organisationName>
-            <gmd:positionName>
-                <gco:CharacterString>Data Curator &amp; Stewardship Coordinator</gco:CharacterString>
-            </gmd:positionName>
+            <gmd:positionName gco:nilReason="missing"/>
             <gmd:contactInfo>
                 <gmd:CI_Contact>
-                    <gmd:phone>
-                        <gmd:CI_Telephone>
-                            <gmd:voice>
-                                <gco:CharacterString>303-497-1832</gco:CharacterString>
-                            </gmd:voice>
-                        </gmd:CI_Telephone>
-                    </gmd:phone>
                     <gmd:address>
                         <gmd:CI_Address>
+                            <gmd:deliveryPoint>
+                                <gco:CharacterString>P.O. Box 3000</gco:CharacterString>
+                            </gmd:deliveryPoint>
+                            <gmd:city>
+                                <gco:CharacterString>Boulder</gco:CharacterString>
+                            </gmd:city>
+                            <gmd:administrativeArea>
+                                <gco:CharacterString>CO</gco:CharacterString>
+                            </gmd:administrativeArea>
+                            <gmd:postalCode>
+                                <gco:CharacterString>80307</gco:CharacterString>
+                            </gmd:postalCode>
+                            <gmd:country>
+                                <gco:CharacterString>USA</gco:CharacterString>
+                            </gmd:country>
                             <gmd:electronicMailAddress>
-                                <gco:CharacterString>hou@ucar.edu</gco:CharacterString>
+                                <gco:CharacterString>eol-datahelp@ucar.edu</gco:CharacterString>
                             </gmd:electronicMailAddress>
                         </gmd:CI_Address>
                     </gmd:address>
                     <gmd:onlineResource>
                         <gmd:CI_OnlineResource>
                             <gmd:linkage>
-                                <gmd:URL>https://www2.cisl.ucar.edu/dash/consultation</gmd:URL>
+                                <gmd:URL>https://data.eol.ucar.edu</gmd:URL>
                             </gmd:linkage>
+                            <gmd:name>
+                                <gco:CharacterString>EOL Data Archive</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:description>
+                                <gco:CharacterString>The EOL data archive contains atmospheric, meteorological, and other geophysical datasets from operational sources and the scientific research programs and projects for which the National Center for Atmosheric Research/Earth Observing Laboratory has provided data management support. </gco:CharacterString>
+                            </gmd:description>
+                            <gmd:function>
+                                <gmd:CI_OnLineFunctionCode
+                                    codeList="./resources/codeList.xml#CI_OnLineFunctionCode" codeListValue="download">download</gmd:CI_OnLineFunctionCode>
+                            </gmd:function>
                         </gmd:CI_OnlineResource>
                     </gmd:onlineResource>
                 </gmd:CI_Contact>
@@ -63,9 +77,7 @@
             </gmd:role>
         </gmd:CI_ResponsibleParty>
     </gmd:contact>
-    <gmd:dateStamp>
-        <gco:Date>2017-04-01</gco:Date>
-    </gmd:dateStamp>
+    <gmd:dateStamp gco:nilReason="missing"/>
     <gmd:metadataStandardName>
         <gco:CharacterString>ISO 19115</gco:CharacterString>
     </gmd:metadataStandardName>
@@ -73,14 +85,14 @@
         <gco:CharacterString>ISO19115:2003/Cor 1 2006</gco:CharacterString>
     </gmd:metadataStandardVersion>
     <gmd:dataSetURI>
-        <gco:CharacterString>http://inspire.ec.europa.eu/reports/ImplementingRules/metadata/MD_IR_and_ISO_20071210.pdf</gco:CharacterString>
+        <gco:CharacterString>https://data.eol.ucar.edu</gco:CharacterString>
     </gmd:dataSetURI>
     <gmd:identificationInfo>
         <gmd:MD_DataIdentification>
             <gmd:citation>
                 <gmd:CI_Citation>
                     <gmd:title>
-                        <gco:CharacterString>FAST Metadata Entry Example Dataset </gco:CharacterString>
+                        <gco:CharacterString>Metadata Template</gco:CharacterString>
                     </gmd:title>
                     <gmd:date>
                         <gmd:CI_Date>
@@ -99,45 +111,101 @@
                     <gmd:editionDate>
                         <gco:Date>2017-04-06</gco:Date>
                     </gmd:editionDate>
+                    <gmd:identifier>
+                        <gmd:MD_Identifier>
+                            <gmd:authority>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                    <gco:CharacterString>Digital Object Identifie</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:alternateTitle>
+                                    <gco:CharacterString>DOI</gco:CharacterString>
+                                    </gmd:alternateTitle>
+                                    <gmd:date>
+                                    <gmd:CI_Date>
+                                    <gmd:date>
+                                    <gco:Date>2017-06-01</gco:Date>
+                                    </gmd:date>
+                                    <gmd:dateType>
+                                    <gmd:CI_DateTypeCode
+                                    codeList="./resources/codeList.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+                                    </gmd:dateType>
+                                    </gmd:CI_Date>
+                                    </gmd:date>
+                                    <gmd:citedResponsibleParty>
+                                    <gmd:CI_ResponsibleParty>
+                                    <gmd:individualName gco:nilReason="missing"/>
+                                    <gmd:organisationName>
+                                    <gco:CharacterString>DataCite Working Group</gco:CharacterString>
+                                    </gmd:organisationName>
+                                    <gmd:positionName gco:nilReason="missing"/>
+                                    <gmd:role>
+                                    <gmd:CI_RoleCode
+                                    codeList="./resources/codeList.xml#CI_RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+                                    </gmd:role>
+                                    </gmd:CI_ResponsibleParty>
+                                    </gmd:citedResponsibleParty>
+                                </gmd:CI_Citation>
+                            </gmd:authority>
+                            <gmd:code>
+                                <gco:CharacterString>105065/</gco:CharacterString>
+                            </gmd:code>
+                        </gmd:MD_Identifier>
+                    </gmd:identifier>
                     <gmd:citedResponsibleParty>
                         <gmd:CI_ResponsibleParty>
-                            <gmd:individualName>
-                                <gco:CharacterString>Don Stott</gco:CharacterString>
-                            </gmd:individualName>
+                            <gmd:individualName gco:nilReason="missing"/>
                             <gmd:organisationName>
-                                <gco:CharacterString>EOL</gco:CharacterString>
+                                <gco:CharacterString>UCAR/NCAR - Earth Observing Laboratory</gco:CharacterString>
                             </gmd:organisationName>
-                            <gmd:positionName>
-                                <gco:CharacterString>Software Engineer/Programmer</gco:CharacterString>
-                            </gmd:positionName>
+                            <gmd:positionName gco:nilReason="missing"/>
                             <gmd:contactInfo>
                                 <gmd:CI_Contact>
-                                    <gmd:phone>
-                                    <gmd:CI_Telephone>
-                                    <gmd:voice>
-                                    <gco:CharacterString>303-497-8154</gco:CharacterString>
-                                    </gmd:voice>
-                                    </gmd:CI_Telephone>
-                                    </gmd:phone>
                                     <gmd:address>
                                     <gmd:CI_Address>
+                                    <gmd:deliveryPoint>
+                                    <gco:CharacterString>P.O. Box 3000</gco:CharacterString>
+                                    </gmd:deliveryPoint>
+                                    <gmd:city>
+                                    <gco:CharacterString>Boulder</gco:CharacterString>
+                                    </gmd:city>
+                                    <gmd:administrativeArea>
+                                    <gco:CharacterString>CO</gco:CharacterString>
+                                    </gmd:administrativeArea>
+                                    <gmd:postalCode>
+                                    <gco:CharacterString>80307</gco:CharacterString>
+                                    </gmd:postalCode>
+                                    <gmd:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                    </gmd:country>
                                     <gmd:electronicMailAddress>
-                                    <gco:CharacterString>stott@ucar.edu</gco:CharacterString>
+                                    <gco:CharacterString>eol-datahelp@ucar.edu</gco:CharacterString>
                                     </gmd:electronicMailAddress>
                                     </gmd:CI_Address>
                                     </gmd:address>
+                                    <gmd:onlineResource>
+                                    <gmd:CI_OnlineResource>
+                                    <gmd:linkage>
+                                    <gmd:URL>https://data.eol.ucar.edu</gmd:URL>
+                                    </gmd:linkage>
+                                    </gmd:CI_OnlineResource>
+                                    </gmd:onlineResource>
                                 </gmd:CI_Contact>
                             </gmd:contactInfo>
                             <gmd:role>
                                 <gmd:CI_RoleCode
-                                    codeList="./resources/codeList.xml#CI_RoleCode" codeListValue="author">author</gmd:CI_RoleCode>
+                                    codeList="./resources/codeList.xml#CI_RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
                             </gmd:role>
                         </gmd:CI_ResponsibleParty>
                     </gmd:citedResponsibleParty>
+                    <gmd:presentationForm>
+                        <gmd:CI_PresentationFormCode
+                            codeList="./resources/codeList.xml#CI_PresentationFormCode" codeListValue="documentDigital">documentDigital</gmd:CI_PresentationFormCode>
+                    </gmd:presentationForm>
                 </gmd:CI_Citation>
             </gmd:citation>
             <gmd:abstract>
-                <gco:CharacterString>This is the FAST (Functional Abbreviated System Template) metadata profile for NMDEdit. </gco:CharacterString>
+                <gco:CharacterString>This is the National Center for Atmospheric Research (NCAR Earth Observing Laboratory (EOL) metadata template for NMDEdit. </gco:CharacterString>
             </gmd:abstract>
             <gmd:status>
                 <gmd:MD_ProgressCode
@@ -145,35 +213,39 @@
             </gmd:status>
             <gmd:pointOfContact>
                 <gmd:CI_ResponsibleParty>
-                    <gmd:individualName>
-                        <gco:CharacterString>Sophie Hou</gco:CharacterString>
-                    </gmd:individualName>
+                    <gmd:individualName gco:nilReason="missing"/>
                     <gmd:organisationName>
-                        <gco:CharacterString>CISL/DSS</gco:CharacterString>
+                        <gco:CharacterString>UCAR/NCAR - Earth Observing Laboratory</gco:CharacterString>
                     </gmd:organisationName>
-                    <gmd:positionName>
-                        <gco:CharacterString>Data Curator &amp; Stewardship Coordinator</gco:CharacterString>
-                    </gmd:positionName>
+                    <gmd:positionName gco:nilReason="missing"/>
                     <gmd:contactInfo>
                         <gmd:CI_Contact>
-                            <gmd:phone>
-                                <gmd:CI_Telephone>
-                                    <gmd:voice>
-                                    <gco:CharacterString>303-497-1832</gco:CharacterString>
-                                    </gmd:voice>
-                                </gmd:CI_Telephone>
-                            </gmd:phone>
                             <gmd:address>
                                 <gmd:CI_Address>
+                                    <gmd:deliveryPoint>
+                                    <gco:CharacterString>P.O. Box 3000</gco:CharacterString>
+                                    </gmd:deliveryPoint>
+                                    <gmd:city>
+                                    <gco:CharacterString>Boulder</gco:CharacterString>
+                                    </gmd:city>
+                                    <gmd:administrativeArea>
+                                    <gco:CharacterString>CO</gco:CharacterString>
+                                    </gmd:administrativeArea>
+                                    <gmd:postalCode>
+                                    <gco:CharacterString>80307</gco:CharacterString>
+                                    </gmd:postalCode>
+                                    <gmd:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                    </gmd:country>
                                     <gmd:electronicMailAddress>
-                                    <gco:CharacterString>hou@ucar.edu</gco:CharacterString>
+                                    <gco:CharacterString>eol-datahelp@ucar.edu</gco:CharacterString>
                                     </gmd:electronicMailAddress>
                                 </gmd:CI_Address>
                             </gmd:address>
                             <gmd:onlineResource>
                                 <gmd:CI_OnlineResource>
                                     <gmd:linkage>
-                                    <gmd:URL>https://www2.cisl.ucar.edu/dash/consultation</gmd:URL>
+                                    <gmd:URL>https://data.eol.ucar.edu</gmd:URL>
                                     </gmd:linkage>
                                 </gmd:CI_OnlineResource>
                             </gmd:onlineResource>
@@ -185,12 +257,23 @@
                     </gmd:role>
                 </gmd:CI_ResponsibleParty>
             </gmd:pointOfContact>
+            <gmd:resourceMaintenance>
+                <gmd:MD_MaintenanceInformation>
+                    <gmd:maintenanceAndUpdateFrequency>
+                        <gmd:MD_MaintenanceFrequencyCode
+                            codeList="./resources/codeList.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</gmd:MD_MaintenanceFrequencyCode>
+                    </gmd:maintenanceAndUpdateFrequency>
+                </gmd:MD_MaintenanceInformation>
+            </gmd:resourceMaintenance>
             <gmd:resourceFormat>
                 <gmd:MD_Format>
                     <gmd:name>
                         <gco:CharacterString>ASCII</gco:CharacterString>
                     </gmd:name>
                     <gmd:version gco:nilReason="missing"/>
+                    <gmd:fileDecompressionTechnique>
+                        <gco:CharacterString>tar or unzip</gco:CharacterString>
+                    </gmd:fileDecompressionTechnique>
                 </gmd:MD_Format>
             </gmd:resourceFormat>
             <gmd:descriptiveKeywords>
@@ -222,20 +305,64 @@
                     </gmd:thesaurusName>
                 </gmd:MD_Keywords>
             </gmd:descriptiveKeywords>
+            <gmd:resourceConstraints>
+                <gmd:MD_LegalConstraints>
+                    <gmd:useLimitation>
+                        <gco:CharacterString>None.</gco:CharacterString>
+                    </gmd:useLimitation>
+                    <gmd:otherConstraints>
+                        <gco:CharacterString>None.</gco:CharacterString>
+                    </gmd:otherConstraints>
+                </gmd:MD_LegalConstraints>
+            </gmd:resourceConstraints>
             <gmd:spatialRepresentationType>
                 <gmd:MD_SpatialRepresentationTypeCode
                     codeList="./resources/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="grid">grid</gmd:MD_SpatialRepresentationTypeCode>
             </gmd:spatialRepresentationType>
+            <gmd:spatialResolution>
+                <gmd:MD_Resolution>
+                    <gmd:distance>
+                        <gco:Distance uom="degree">0.5</gco:Distance>
+                    </gmd:distance>
+                </gmd:MD_Resolution>
+            </gmd:spatialResolution>
             <gmd:language gco:nilReason="missing"/>
             <gmd:characterSet gco:nilReason="missing"/>
             <gmd:topicCategory>
-                <gmd:MD_TopicCategoryCode>location</gmd:MD_TopicCategoryCode>
+                <gmd:MD_TopicCategoryCode>geoscientificInformation</gmd:MD_TopicCategoryCode>
             </gmd:topicCategory>
             <gmd:extent>
                 <gmd:EX_Extent>
                     <gmd:description>
                         <gco:CharacterString>anywhere and everywhere (change this)</gco:CharacterString>
                     </gmd:description>
+                    <gmd:geographicElement>
+                        <gmd:EX_GeographicBoundingBox>
+                            <gmd:westBoundLongitude>
+                                <gco:Decimal>-180.0</gco:Decimal>
+                            </gmd:westBoundLongitude>
+                            <gmd:eastBoundLongitude>
+                                <gco:Decimal>180.0</gco:Decimal>
+                            </gmd:eastBoundLongitude>
+                            <gmd:southBoundLatitude>
+                                <gco:Decimal>-90.0</gco:Decimal>
+                            </gmd:southBoundLatitude>
+                            <gmd:northBoundLatitude>
+                                <gco:Decimal>90.0</gco:Decimal>
+                            </gmd:northBoundLatitude>
+                        </gmd:EX_GeographicBoundingBox>
+                    </gmd:geographicElement>
+                    <gmd:temporalElement>
+                        <gmd:EX_TemporalExtent>
+                            <gmd:extent>
+                                <gml:TimePeriod gml:id="timePeriodDate">
+                                    <gml:beginPosition>2017-06-01T11:00:00</gml:beginPosition>
+                                    <gml:endPosition>2017-06-02T23:59:59</gml:endPosition>
+                                </gml:TimePeriod>
+                            </gmd:extent>
+                        </gmd:EX_TemporalExtent>
+                    </gmd:temporalElement>
+                    <gmd:verticalElement gco:nilReason="missing"/>
                 </gmd:EX_Extent>
             </gmd:extent>
         </gmd:MD_DataIdentification>
@@ -245,11 +372,72 @@
             <gmd:distributionFormat>
                 <gmd:MD_Format>
                     <gmd:name>
-                        <gco:CharacterString>ASCII</gco:CharacterString>
+                        <gco:CharacterString>ZIP</gco:CharacterString>
                     </gmd:name>
                     <gmd:version gco:nilReason="missing"/>
+                    <gmd:fileDecompressionTechnique>
+                        <gco:CharacterString>unzip</gco:CharacterString>
+                    </gmd:fileDecompressionTechnique>
                 </gmd:MD_Format>
             </gmd:distributionFormat>
+            <gmd:distributor>
+                <gmd:MD_Distributor>
+                    <gmd:distributorContact>
+                        <gmd:CI_ResponsibleParty>
+                            <gmd:individualName gco:nilReason="missing"/>
+                            <gmd:organisationName>
+                                <gco:CharacterString>UCAR/NCAR - Earth Observing Laboratory</gco:CharacterString>
+                            </gmd:organisationName>
+                            <gmd:positionName gco:nilReason="missing"/>
+                            <gmd:contactInfo>
+                                <gmd:CI_Contact>
+                                    <gmd:address>
+                                    <gmd:CI_Address>
+                                    <gmd:deliveryPoint>
+                                    <gco:CharacterString>P.O. Box 3000</gco:CharacterString>
+                                    </gmd:deliveryPoint>
+                                    <gmd:city>
+                                    <gco:CharacterString>Boulder</gco:CharacterString>
+                                    </gmd:city>
+                                    <gmd:administrativeArea>
+                                    <gco:CharacterString>CO</gco:CharacterString>
+                                    </gmd:administrativeArea>
+                                    <gmd:postalCode>
+                                    <gco:CharacterString>80307</gco:CharacterString>
+                                    </gmd:postalCode>
+                                    <gmd:country>
+                                    <gco:CharacterString>USA</gco:CharacterString>
+                                    </gmd:country>
+                                    <gmd:electronicMailAddress>
+                                    <gco:CharacterString>eol-datahelp@ucar.edu</gco:CharacterString>
+                                    </gmd:electronicMailAddress>
+                                    </gmd:CI_Address>
+                                    </gmd:address>
+                                    <gmd:onlineResource>
+                                    <gmd:CI_OnlineResource>
+                                    <gmd:linkage>
+                                    <gmd:URL>https://data.eol.ucar.edu</gmd:URL>
+                                    </gmd:linkage>
+                                    </gmd:CI_OnlineResource>
+                                    </gmd:onlineResource>
+                                </gmd:CI_Contact>
+                            </gmd:contactInfo>
+                            <gmd:role>
+                                <gmd:CI_RoleCode
+                                    codeList="./resources/codeList.xml#CI_RoleCode" codeListValue="distributor">distributor</gmd:CI_RoleCode>
+                            </gmd:role>
+                        </gmd:CI_ResponsibleParty>
+                    </gmd:distributorContact>
+                    <gmd:distributorFormat gco:nilReason="missing"/>
+                </gmd:MD_Distributor>
+            </gmd:distributor>
+            <gmd:transferOptions>
+                <gmd:MD_DigitalTransferOptions>
+                    <gmd:unitsOfDistribution>
+                        <gco:CharacterString>Files by date.</gco:CharacterString>
+                    </gmd:unitsOfDistribution>
+                </gmd:MD_DigitalTransferOptions>
+            </gmd:transferOptions>
         </gmd:MD_Distribution>
     </gmd:distributionInfo>
     <gmd:metadataConstraints>
@@ -259,5 +447,13 @@
             </gmd:useLimitation>
         </gmd:MD_Constraints>
     </gmd:metadataConstraints>
+    <gmd:metadataMaintenance>
+        <gmd:MD_MaintenanceInformation>
+            <gmd:maintenanceAndUpdateFrequency>
+                <gmd:MD_MaintenanceFrequencyCode
+                    codeList="./resources/codeList.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded">asNeeded</gmd:MD_MaintenanceFrequencyCode>
+            </gmd:maintenanceAndUpdateFrequency>
+        </gmd:MD_MaintenanceInformation>
+    </gmd:metadataMaintenance>
 </gmd:MD_Metadata>
-
+<!--Metadata generated with CatMDEdit version 5.0-->
