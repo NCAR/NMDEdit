@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:iso="http://www.isotc211.org/19115/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rdf:Description rdf:about="feb5c26a-39a1-4847-989a-8c776e4c500d">
+        <dc:title xml:lang="eng">DataCite Metadata Working Group</dc:title>
+        <foaf:mbox rdf:resource="mailto:support@datacite.org"/>
+        <foaf:homepage rdf:resource="https://groups.google.com/forum/?hl=en&amp;fromgroups#!forum/datacite-metadata"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </rdf:Description>
+</rdf:RDF>
+<!--Metadata generated with CatMDEdit version 5.0-->

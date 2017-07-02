@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+	xmlns:iso="http://www.isotc211.org/19115/" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:v="http://www.w3.org/2006/vcard/ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rdf:Description rdf:about="3271663b-86f5-4ac3-86ed-bf978a22e16c">
+        <dc:title>UCAR/NCAR - High Altitude Observatory</dc:title>
+        <foaf:mbox rdf:resource="mailto:kolinski@ucar.edu"/>
+        <foaf:homepage rdf:resource="https://www.hao.ucar.edu"/>
+        <v:adr>
+            <v:Address>
+                <v:street-address>P.O. Box 3000</v:street-address>
+                <v:postal-code>80307</v:postal-code>
+                <v:locality>Boulder</v:locality>
+                <v:region>CO</v:region>
+                <v:country-name>USA</v:country-name>
+            </v:Address>
+        </v:adr>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </rdf:Description>
+</rdf:RDF>
