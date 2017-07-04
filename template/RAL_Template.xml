@@ -67,9 +67,9 @@
             </gmd:role>
         </gmd:CI_ResponsibleParty>
     </gmd:contact>
-    <gmd:DateStamp>
+    <gmd:dateStamp>
         <gco:DateTime>2017-07-01T16:55:39</gco:DateTime>
-    </gmd:DateStamp>
+    </gmd:dateStamp>
     <gmd:metadataStandardName>
         <gco:CharacterString>ISO 19115 Geographic Information - Metadata</gco:CharacterString>
     </gmd:metadataStandardName>
