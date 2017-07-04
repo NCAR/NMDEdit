@@ -21,7 +21,7 @@
         </lista>
         <attributes/>
     </singleComplex>
-    <text hidden="true" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/optional" attribute="0" scheme="CharacterString" schemeNs="gco" element_namespace="http://www.opengis.net/gml/" element_name="timeInterval" element_prefix="gml" label_en="Time Interval" label_fr="null" label_pl="null" label_pt="null" label_es="null" description_en="null" description_fr="null" description_pl="null" description_pt="null" description_es="null" condition_en="null" condition_fr="null" condition_pl="null" condition_pt="null" condition_es="null" example_en="null" example_fr="null" example_pl="null" example_pt="null" example_es="null">
+    <text hidden="false" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/optional" attribute="0" scheme="CharacterString" schemeNs="gco" element_namespace="http://www.opengis.net/gml/" element_name="timeInterval" element_prefix="gml" label_en="Time Interval" label_fr="null" label_pl="null" label_pt="null" label_es="null" description_en="null" description_fr="null" description_pl="null" description_pt="null" description_es="null" condition_en="null" condition_fr="null" condition_pl="null" condition_pt="null" condition_es="null" example_en="null" example_fr="null" example_pl="null" example_pt="null" example_es="null">
         <lista/>
         <attributes>
             <attribute prefix="gml" namespace="http://www.opengis.net/gml/" name="factor" label_en="Factor" label_es="Factor" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/optional"/>
