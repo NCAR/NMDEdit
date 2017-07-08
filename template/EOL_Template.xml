@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco"
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
-    xmlns:gml="http://www.opengis.net/gml/"
+    xmlns:gml="http://www.opengis.net/gml"
     xmlns:gts="http://www.isotc211.org/2005/gts/"
     xmlns:xlink="http://www.w3.org/1999/xlink/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <gmd:fileIdentifier>
@@ -77,9 +77,9 @@
             </gmd:role>
         </gmd:CI_ResponsibleParty>
     </gmd:contact>
-    <gmd:dateStamp>
-        <gco:DateTime>2017-07-01T16:54:40</gco:DateTime>
-    </gmd:dateStamp>
+    <gmd:DateStamp>
+        <gco:DateStamp>2017-07-01T11:26:07</gco:DateStamp>
+    </gmd:DateStamp>
     <gmd:metadataStandardName>
         <gco:CharacterString>ISO 19115 Geographic Information - Metadata</gco:CharacterString>
     </gmd:metadataStandardName>
@@ -554,4 +554,4 @@
         </gmd:MD_MaintenanceInformation>
     </gmd:metadataMaintenance>
 </gmd:MD_Metadata>
-<!--Metadata generated with NMDEdit version 5.2.2-->
+<!--Metadata generated with CatMDEdit version 5.0-->
