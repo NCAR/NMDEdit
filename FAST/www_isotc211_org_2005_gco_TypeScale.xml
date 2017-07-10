@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<object xmlns:gts="http://www.isotc211.org/2005/gts/" xmlns:iaaacl="http://iaaa.cps.unizar.es/ControlledList/" xmlns:gmd="http://www.isotc211.org/2005/gmd/" xmlns:gco="http://www.isotc211.org/2005/gco/" xmlns:void="http://iaaa.cps.unizar.es/void/" xmlns:xlink="http://www.w3.org/1999/xlink/" xmlns:gml="http://www.opengis.net/gml/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" namespace="gco" tipomd="wtComplex" label_es="Escala" label_en="Scale" number="0.0">
-    <text hidden="false" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/mandatory" attribute="" scheme="" schemeNs="" element_namespace="http://www.isotc211.org/2005/gco/" element_name="Scale" element_prefix="gco" label_en="Scale" label_es="Escala" label_fr="null" label_pt="null" label_pl="null" description_en="null" description_es="null" description_fr="null" description_pt="null" description_pl="null" condition_en="null" condition_es="null" condition_fr="null" condition_pt="null" condition_pl="null" example_en="null" example_es="null" example_fr="null" example_pt="null" example_pl="null">
-        <lista/>
-        <attributes>
-            <attribute prefix="void" namespace="http://iaaa.cps.unizar.es/void/" name="uom" label_en="Unit of measure" label_es="Unidad de medida" obligation="http://www.ukoln.ac.uk/projects/iemsr/terms/Obligation/conditional"/>
-        </attributes>
-    </text>
-</object>

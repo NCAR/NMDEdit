@@ -57,7 +57,6 @@
  <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::MARC21 MARCXML (.xml);step1=metadataConversor.ExpMarc21MetadataConversor[format=MARCXML]</dcterms:conformsTo>
  
  <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionHTML.HtmlMetadataEditor[summary=true]</dcterms:isFormatOf>
- <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionGeneric.GenericMetadataEditor[GUIFile=www_isotc211_org_2005_gmd_MD_Metadata,editorName=FAST,allowUnknowns=false]</dcterms:isFormatOf>
  <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionGeneric.GenericMetadataEditor[GUIFile=www_isotc211_org_2005_gmd_MD_Metadata,editorName=Expert Mode,allowUnknowns=false,validationURL=http://www.idee.es/INSPIREValidatorService/resources/validation/inspire-nem]</dcterms:isFormatOf>
  <dcterms:isFormatOf>editor=metadataManager.metadataEdition.metadataEditionGeneric.GenericMetadataEditor[GUIFile=www_isotc211_org_2005_gmd_MD_Metadata,editorName=NCAR Dialect,allowUnknowns=false]</dcterms:isFormatOf>
  <dcterms:isFormatOf>parser=recordManager.MetadataParserISO19139</dcterms:isFormatOf>
