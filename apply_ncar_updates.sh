@@ -6,6 +6,7 @@
 #   updated for ver.5.2.0 
 #   added thesaurus changes - Jun 1, 2017
 #   rearranged files - Jun 14
+#   numerous changes - Jul 10
 #####################################################
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/NMDEdit):"
@@ -30,15 +31,9 @@ sleep 1
 cp -r "NCAR Dialect" "$catBase/template/genericEditor/gui/NCAR Dialect"
 echo "copied NCAR Dialect directory to $catBase/template/genericEditor/gui/NCAR Dialect"
 sleep 1
-cp -r "FAST" "$catBase/template/genericEditor/gui/FAST"
-echo "copied FAST directory to $catBase/template/genericEditor/gui/FAST"
+cp -r ./template "%catBase%/repository/templates"
+echo "copied template files to $catBase/repository/templates"
 sleep 1
-cp files/FAST_Template.xml "$catBase/repository/templates"
-echo "copied FAST_Template.xml to $catBase/repository/templates"
-cp files/EOL_Template.xml "$catBase/repository/templates"
-echo "copied EOL_Template.xml to $catBase/repository/templates"
-cp files/RAL_Template.xml "$catBase/repository/templates"
-echo "copied RAL_Template.xml to $catBase/repository/templates"
 cp -f files/iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
 cp -f files/nmdedit-5.2.0.jar "$catBase/lib"
@@ -72,7 +67,7 @@ cp sample_XML/*.xml "$catBase/repository/metadata"
 # add our NCAR contacts
 ###########################
 cp contact/*.rdf "$catBase/repository/contact"
-echo "copied contact/*.rdf to $catBase/repository/contact"
+echo "copied contacts to $catBase/repository/contact"
 sleep 1
 #######################################################
 # fix up thesaurus directory

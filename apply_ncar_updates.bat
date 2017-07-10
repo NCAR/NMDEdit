@@ -6,6 +6,7 @@ REM # Run this after installing CatMDEdit
 REM #   updated for ver.5.2.0 
 REM #   added thesaurus changes - Jun 2, 2017
 REM #   rearranged files - Jun 14 
+REM #   numerous changes - Jul 10
 REM #####################################################
 echo.
 set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\CatMDEdit): 
@@ -18,10 +19,7 @@ REM ###########################
 @echo on
 xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
-xcopy /S "FAST" "%catBase%\template\genericEditor\gui\FAST" /i
-copy files\FAST_Template.xml "%catBase%\repository\templates" 
-copy files\EOL_Template.xml "%catBase%\repository\templates" 
-copy files\RAL_Template.xml "%catBase%\repository\templates" 
+xcopy /S template "%catBase%\repository\templates" /i
 copy /Y files\iso19115.xml "%catBase%\repository\standards"
 copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy files\Default.theme "%catBase%"
