@@ -19,7 +19,7 @@ REM ###########################
 @echo on
 xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
-xcopy /S template "%catBase%\repository\templates" /i
+copy template\*.xml "%catBase%\repository\templates"
 copy /Y files\iso19115.xml "%catBase%\repository\standards"
 copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy files\Default.theme "%catBase%"

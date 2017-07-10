@@ -31,7 +31,7 @@ sleep 1
 cp -r "NCAR Dialect" "$catBase/template/genericEditor/gui/NCAR Dialect"
 echo "copied NCAR Dialect directory to $catBase/template/genericEditor/gui/NCAR Dialect"
 sleep 1
-cp -r ./template "%catBase%/repository/templates"
+cp ./template/*.xml "%catBase%/repository/templates"
 echo "copied template files to $catBase/repository/templates"
 sleep 1
 cp -f files/iso19115.xml "$catBase/repository/standards"
