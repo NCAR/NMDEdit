@@ -1,5 +1,5 @@
 #!/bin/bash
-#####################################################
+#########################################################
 # Applies NCAR-specific configurations to CatMDEdit
 # updating thesauri and adding our Contacts list. 
 # Run this after installing CatMDEdit 
@@ -7,7 +7,8 @@
 #   added thesaurus changes - Jun 1, 2017
 #   rearranged files - Jun 14
 #   numerous changes - Jul 10
-#####################################################
+#   based on catmdedit 4.6.6 to fix gml/ issue - Jul 18
+#########################################################
 echo ""
 echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/NMDEdit):"
 read catBase
@@ -33,24 +34,25 @@ echo "copied NCAR Dialect directory to $catBase/template/genericEditor/gui/NCAR 
 sleep 1
 cp ./template/*.xml "$catBase/repository/templates"
 echo "copied template files to $catBase/repository/templates"
-sleep 1
 cp -f files/iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
-cp -f files/nmdedit-5.2.0.jar "$catBase/lib"
-echo "copied nmdedit-5.2.0.jar to $catBase/lib"
-sleep 1
+# cp -f files/nmdedit-5.2.0.jar "$catBase/lib"
+# echo "copied nmdedit-5.2.0.jar to $catBase/lib"
+# sleep 1
 cp files/Default.theme "$catBase"
 echo "copied Default.theme to $catBase"
+cp files/*.gif "$catBase/imagen/metadataEditorComponent"
+echo "copied icons to $catBase/imagen/metadataEditorComponent"
 cp -f files/internat.properties "$catBase"
 echo "copied internat.properties to $catBase"
 cp -f files/splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
 echo "copied  splash_Cat_5.0_NMDEdit.jpg to $catBase/imagen/generalIcons"
 cp -f files/icons.properties "$catBase"  
 echo "copied icons.properties to $catBase"
-cp files/NMDEdit.launch "$catBase"
-echo "copied NMDEdit.launch to $catBase"
-cp files/NMDEdit.properties "$catBase"
-echo "copied NMDEdit.properties to $catBase"
+# cp files/NMDEdit.launch "$catBase"
+# echo "copied NMDEdit.launch to $catBase"
+# cp files/NMDEdit.properties "$catBase"
+# echo "copied NMDEdit.properties to $catBase"
 cp files/about.html "$catBase/doc/about"
 echo "copied about.html to $catBase/doc/about"
 cp files/ncar_highres_transparent.png "$catBase/doc/about/about_files"
@@ -93,8 +95,8 @@ rm "$catBase/repository/thesaurus/CEODiscipline.dat"
 rm "$catBase/repository/thesaurus/CEODisicpline.MD.DC.xml"
 rm "$catBase/repository/thesaurus/CEOLocation.dat"
 rm "$catBase/repository/thesaurus/CEOLocation.MD.DC.xml"
-rm "$catBase/repository/thesaurus/DroughtVocabulary.dat"
-rm "$catBase/repository/thesaurus/DroughtVocabulary.MD.DC.xml"
+# rm "$catBase/repository/thesaurus/DroughtVocabulary.dat"
+# rm "$catBase/repository/thesaurus/DroughtVocabulary.MD.DC.xml"
 rm "$catBase/repository/thesaurus/EuropeanTerritorialUnits.dat"
 rm "$catBase/repository/thesaurus/EuropeanTerritorialUnits.MD.DC.xml"
 rm "$catBase/repository/thesaurus/EUROVOC.dat"
@@ -136,6 +138,7 @@ echo "and set permissions on startup.sh"
 sleep 2
 cd "$catBase"
 echo "NMDEdit is now ready to use"
-echo "To start, type ./startup.sh in the terminal window of the installation directory, $catBase" 
+echo ""
+echo "  To start, type ./startup.sh in the terminal window of the installation directory, $catBase" 
 #echo "done"
 echo ""

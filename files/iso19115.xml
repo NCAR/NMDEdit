@@ -24,7 +24,7 @@
  
  <dc:format>name=MARC21 ISO2709 (.mrc);format=mrc;type=ES;header=[0-9][0-9][0-9][0-9][0-9](a|c|d|n|p)(a|c|d|e|f|g|i|j|k|m|o|p|r|t)(a|b|c|d|i|m|s).*</dc:format>
  <dc:format>name=MARC21 (.txt);format=txt;type=ES;header=[^&gt;]*\n([L|l][D|d][R|r].*(\s)+(\n)+)?(\.?[0-9][0-9][0-9]\.?.*\n+)+.*</dc:format>
- <dc:format>name=MARC21 MARCXML (.xml);format=xml;type=ES;header=&lt;\?xml[^&gt;]*&gt;.*&lt;([^:]:)?(collection|record)\s[^&gt;]*&gt;.*</dc:format>
+ <dc:format>name=MARC21 MARCXML (.xml);format=xml;type=ES;header=&lt;\?xml[^&gt;]*&gt;.*&lt;.*\:?collection\s[^&gt;]*&gt;.*</dc:format>
  
  <dcterms:conformsTo>source=ISO 19115 XML;dest=iso::ISO 19115 XML;step1=metadataConversor.MetadataConversor[]</dcterms:conformsTo>
  

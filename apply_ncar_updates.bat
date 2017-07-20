@@ -1,5 +1,5 @@
 @echo off 
-REM #####################################################
+REM #########################################################^M
 REM # Applies NCAR-specific configurations to CatMDEdit,
 REM # updating thesauri and adding our Contacts list. 
 REM # Run this after installing CatMDEdit 
@@ -7,10 +7,12 @@ REM #   updated for ver.5.2.0
 REM #   added thesaurus changes - Jun 2, 2017
 REM #   rearranged files - Jun 14 
 REM #   numerous changes - Jul 10
-REM #####################################################
+REM #   based on catmdedit 4.6.6 to fix gml/ issue - Jul 18
+REM #########################################################^M
 echo.
 set /P catBase= Enter the full path to the base CatMDEdit directory (e.g. C:\CatMDEdit): 
-echo "Files within the %catBase% installation directory will be updated"
+echo ""
+echo "Press any key to update files within the %catBase% installation directory..."
 echo ""
 pause
 REM ###########################
@@ -21,13 +23,14 @@ xcopy /S "Expert Mode" "%catBase%\template\genericEditor\gui\Expert Mode" /i
 xcopy /S "NCAR Dialect" "%catBase%\template\genericEditor\gui\NCAR Dialect" /i
 copy template\*.xml "%catBase%\repository\templates"
 copy /Y files\iso19115.xml "%catBase%\repository\standards"
-copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
+REM copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy files\Default.theme "%catBase%"
+copy files\*.gif "%catBase%\imagen\metadataEditorComponent"
 copy /Y files\internat.properties "%catBase%"
 copy /Y files\splash_Cat_5.0_NMDEdit.jpg "%catBase%\imagen\generalIcons"
 copy /Y files\icons.properties "%catBase%"  
-copy files\NMDEdit.launch "%catBase%"
-copy files\NMDEdit.properties "%catBase%"
+REM copy files\NMDEdit.launch "%catBase%"
+REM copy files\NMDEdit.properties "%catBase%"
 copy files\about.html "%catBase%\doc\about"
 copy files\ncar_highres_transparent.png "%catBase%\doc\about\about_files"
 copy /Y files\gmxCodelists.xml "%catBase%\xml\schemas\ISO_19139_Schemas\resources\Codelist"
@@ -66,8 +69,8 @@ del "%catBase%\repository\thesaurus\CEODiscipline.dat"
 del "%catBase%\repository\thesaurus\CEODisicpline.MD.DC.xml"
 del "%catBase%\repository\thesaurus\CEOLocation.dat"
 del "%catBase%\repository\thesaurus\CEOLocation.MD.DC.xml"
-del "%catBase%\repository\thesaurus\DroughtVocabulary.dat"
-del "%catBase%\repository\thesaurus\DroughtVocabulary.MD.DC.xml"
+REM del "%catBase%\repository\thesaurus\DroughtVocabulary.dat"
+REM del "%catBase%\repository\thesaurus\DroughtVocabulary.MD.DC.xml"
 del "%catBase%\repository\thesaurus\EuropeanTerritorialUnits.dat"
 del "%catBase%\repository\thesaurus\EuropeanTerritorialUnits.MD.DC.xml"
 del "%catBase%\repository\thesaurus\EUROVOC.dat"
@@ -103,7 +106,7 @@ REM ############################################################################
 @echo on
 ren "%catBase%\CatMDEdit.bat" "NMDEdit.bat"
 @echo off
-echo "NMDEdit is now ready to use"
+echo "NMDEdit is now ready to use. CLick on the NMDEdit.bat file in the "%catBase% directory to start."
 echo. 
 echo.
 pause
