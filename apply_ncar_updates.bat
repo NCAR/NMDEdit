@@ -27,7 +27,7 @@ copy /Y files\nmdedit-5.2.0.jar "%catBase%\lib\catmdedit-5.0.jar"
 copy files\Default.theme "%catBase%"
 copy /Y files\internat.properties "%catBase%"
 copy /Y files\splash_Cat_5.0_NMDEdit.jpg "%catBase%\imagen\generalIcons"
-copy /Y files\icons.properties "%catBase%"  
+copy /Y files\icons.properties "%catBase%" 
 copy files\NMDEdit.launch "%catBase%"
 copy files\NMDEdit.properties "%catBase%"
 copy files\about.html "%catBase%\doc\about"
