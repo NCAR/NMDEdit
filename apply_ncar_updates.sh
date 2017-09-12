@@ -10,7 +10,7 @@
 #   fixed gml/ issue - Jul 18
 #########################################################
 echo ""
-echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/NMDEdit):"
+echo "Enter the full path to the base CatMDEdit directory (e.g. /Users/jsmith/CatMDEdit):"
 read catBase
 if [ -d "$catBase" ] 
     then echo "directory $catBase exists"
