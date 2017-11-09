@@ -33,7 +33,10 @@ cp -r "NCAR Dialect" "$catBase/template/genericEditor/gui/NCAR Dialect"
 echo "copied NCAR Dialect directory to $catBase/template/genericEditor/gui/NCAR Dialect"
 sleep 1
 cp ./template/*.xml "$catBase/repository/templates"
-echo "copied template files to $catBase/repository/templates"
+echo "copied lab template files to $catBase/repository/templates"
+############################################################
+# set NCAR Dialect and Expert Mode as our only ISO profiles
+############################################################
 cp -f files/iso19115.xml "$catBase/repository/standards"
 echo "copied iso19115.xml to $catBase/repository/standards"
 cp -f files/nmdedit-5.2.0.jar "$catBase/lib"
@@ -41,6 +44,9 @@ echo "copied nmdedit-5.2.0.jar to $catBase/lib"
 sleep 1
 cp files/Default.theme "$catBase"
 echo "copied Default.theme to $catBase"
+############################################################
+# set help files, about info, and language
+############################################################
 cp -f files/internat.properties "$catBase"
 echo "copied internat.properties to $catBase"
 cp -f files/splash_Cat_5.0_NMDEdit.jpg "$catBase/imagen/generalIcons"
@@ -49,12 +55,18 @@ cp -f files/icons.properties "$catBase"
 echo "copied icons.properties to $catBase"
 cp files/NMDEdit.launch "$catBase"
 echo "copied NMDEdit.launch to $catBase"
+############################################################
+# set metadata, contacts, feature repositories; and font
+############################################################
 cp files/NMDEdit.properties "$catBase"
 echo "copied NMDEdit.properties to $catBase"
 cp files/about.html "$catBase/doc/about"
 echo "copied about.html to $catBase/doc/about"
 cp files/ncar_highres_transparent.png "$catBase/doc/about/about_files"
 echo "copied ncar_highres_transparent.png to $catBase/doc/about/about_files"
+############################################################
+# update gmx codelist to same one CKAN uses - with gml/3.2
+############################################################
 cp -f files/gmxCodelists.xml "$catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
 echo "copied gmxCodelists.xml to $catBase/xml/schemas/ISO_19139_Schemas/resources/Codelist"
 ###########################
