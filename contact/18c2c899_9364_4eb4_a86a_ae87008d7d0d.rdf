@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rdf:Description rdf:about="18c2c899-9364-4eb4-a86a-ae87008d7d0d">
+        <dc:title>NCAR/EOL Research Aviation Facility</dc:title>
+        <foaf:homepage rdf:resource="https://www.eol.ucar.edu/node/22"/>
+        <foaf:phone rdf:resource="tel: (303) 497-1030"/>
+        <foaf:mbox rdf:resource="mailto:raf@ucar.edu"/>
+        <v:adr>
+            <v:Address>
+                <v:street-address xml:lang="eng">10802 Airport Court</v:street-address>
+                <v:postal-code>80021-2561</v:postal-code>
+                <v:locality>Broomfield</v:locality>
+                <v:region>CO</v:region>
+                <v:country-name>USA</v:country-name>
+            </v:Address>
+        </v:adr>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+    </rdf:Description>
+</rdf:RDF>
+<!--Metadata generated with CatMDEdit version 5.0-->

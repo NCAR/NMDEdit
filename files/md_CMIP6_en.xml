@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thesaurusdc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:iaaaterm="http://iaaa.cps.unizar.es/iaaaterms/" xmlns:iso="http://www.isotc211.org/19115/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fileID="CMIP6" xml:lang="en">
+ <dc:title>CMIP6</dc:title>
+ <dcterms:alternative>CMIP6</dcterms:alternative>
+ <dc:creator>UCAR/NCAR - Climate and Global Dynamics Laboratory</dc:creator>
+ <dc:description>Keywords for Community Earth System Model metadata</dc:description>
+ <dc:publisher>UCAR/NCAR - Climate and Global Dynamics Laboratory</dc:publisher>
+ <dcterms:created>2018-02-01</dcterms:created>
+ <dcterms:issued>2018-03-16</dcterms:issued>
+ <dc:type>theme</dc:type>
+ <dc:format>SKOS</dc:format>
+ <dc:identifier>http://www.cgd.ucar.edu/thesaurus/CMIP6</dc:identifier>
+ 
+ <dcterms:hasVersion>1.0</dcterms:hasVersion>
+ <iso:MD_Metadata.dateStamp>2018-03-16</iso:MD_Metadata.dateStamp>
+ <iso:MD_Metadata.contact>Alice Bertini</iso:MD_Metadata.contact>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dc:language>en</dc:language>
+</thesaurusdc>
