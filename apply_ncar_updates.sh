@@ -94,6 +94,12 @@ cp "files/Resource Type.dat" "$catBase/repository/thesaurus"
 echo "copied Resource Type.dat to $catBase/repository/thesaurus"
 cp "files/md_Resource Type_en.xml" "$catBase/repository/thesaurus"
 echo "copied md_Resource Type_en.xml to $catBase/repository/thesaurus"
+cp files/md_CMIP6_en.xml "%catBase%/repository/thesaurus"
+cp files/CMIP6.dat "%catBase%/repository/thesaurus"
+echo "copied CMIP6 to $catBase/repository/thesaurus"
+cp files/md_CESM_Model_en.xml "%catBase%/repository/thesaurus"
+cp files/CESM_Model.dat "%catBase%/repository/thesaurus"
+echo "copied CESM to $catBase/repository/thesaurus"
 ###########################
 # delete unneeded thesauri
 ###########################

@@ -6,7 +6,6 @@
  <dc:description>Keywords for Community Earth System Model metadata</dc:description>
  <dc:publisher>UCAR/NCAR - Climate and Global Dynamics Laboratory</dc:publisher>
  <dcterms:created>2018-02-01</dcterms:created>
- <dcterms:issued>2018-03-16</dcterms:issued>
  <dc:type>theme</dc:type>
  <dc:format>SKOS</dc:format>
  <dc:identifier>http://www.cgd.ucar.edu/thesaurus/CMIP6</dc:identifier>
@@ -14,41 +13,6 @@
  <dcterms:hasVersion>1.0</dcterms:hasVersion>
  <iso:MD_Metadata.dateStamp>2018-03-16</iso:MD_Metadata.dateStamp>
  <iso:MD_Metadata.contact>Alice Bertini</iso:MD_Metadata.contact>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <dc:language>en</dc:language>
 </thesaurusdc>

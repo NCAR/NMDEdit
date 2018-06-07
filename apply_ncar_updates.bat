@@ -56,6 +56,10 @@ copy /Y files\CSDGM_FormatNameCode.dat "%catBase%\repository\thesaurus"
 copy /Y files\CSDGM_FormatNameCode.MD.DC_externo.xml "%catBase%\repository\thesaurus"
 copy "files\Resource Type.dat" "%catBase%\repository\thesaurus"
 copy "files\md_Resource Type_en.xml" "%catBase%\repository\thesaurus"
+copy files\md_CMIP6_en.xml "%catBase%\repository\thesaurus"
+copy files\CMIP6.dat "%catBase%\repository\thesaurus"
+copy files\md_CESM_Model_en.xml "%catBase%\repository\thesaurus"
+copy files\CESM_Model.dat "%catBase%\repository\thesaurus"
 @echo off
 REM ###########################
 REM # delete unneeded thesauri
