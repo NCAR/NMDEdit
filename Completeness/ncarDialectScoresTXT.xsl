@@ -47,11 +47,10 @@
           </xsl:variable>
 
           <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
-        <!--    <xsl:sort select="subsequence(//gmd:alternateTitle,1,1)"/>  -->   <!-- only for EOL, sort on archive_ident -->
-            <xsl:sort select="subsequence(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title,1,1)"/>
+            <xsl:sort select="subsequence(//gmd:fileIdentifier,1,1)"/>
             <xsl:apply-templates>
-              <xsl:with-param name="xmlFile" select="tokenize(document-uri(.), '/')[last()]"/>
-              <xsl:with-param name="position" select="position()"/>
+                <xsl:with-param name="xmlFile" select="tokenize(document-uri(.), '/')[last()]"/>
+                <xsl:with-param name="position" select="position()"/>
             </xsl:apply-templates>
           </xsl:for-each>
       </RecordSet>
