@@ -44,8 +44,7 @@
                 <xsl:value-of select="concat($recordSetPath, '?select=', $fileNamePattern)"/>
               </xsl:otherwise>
             </xsl:choose>
-          </xsl:variable>
-
+          </xsl:variable>"archive ident","Total Score","abstract","assetType","author","dataIdentification","datasetLanguage","landingPage","metadataContact","metadataDate","metadataRecordID","metadataStandardName","metadataStandardVersion","otherConstraints","publicationDate","publisher","resourceContact","resourceType","title","useConstraints","citationDate","credit","custodian","datasetExtent","datasetExtentDescription","endDate","keyword","originator","pi","referenceSystem","resourceProvider","spatialRepresentationType","spatialResolution","startDate","temporal","temporalResolution","themeKeyword","themeKeywordThesaurus","topicCategory","vertical","additionalInformation","alternateID","assetSize","authorIdentifier","distributionFormat","distributorContact","progress","relatedResourceDescription","relatedResource","relatedResourceName","relatedResourceType","resourceFormat","resourceVersion","softwareImplementationLanguage"
           <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
             <xsl:sort select="subsequence(//gmd:fileIdentifier,1,1)"/>
             <xsl:apply-templates>
