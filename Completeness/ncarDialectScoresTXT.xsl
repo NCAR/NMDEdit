@@ -48,8 +48,8 @@
           <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
             <xsl:sort select="subsequence(//gmd:fileIdentifier,1,1)"/>
             <xsl:apply-templates>
-                <xsl:with-param name="xmlFile" select="tokenize(document-uri(.), '/')[last()]"/>
-                <xsl:with-param name="position" select="position()"/>
+              <xsl:with-param name="xmlFile" select="tokenize(document-uri(.), '/')[last()]"/>
+              <xsl:with-param name="position" select="position()"/>
             </xsl:apply-templates>
           </xsl:for-each>
       </RecordSet>
@@ -305,14 +305,14 @@
         </xsl:variable>
         <xsl:variable name="originatorCnt" select="count(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[.//gmd:role/gmd:CI_RoleCode/@codeListValue='originator'])"/>
 
-        <!-- Principal Investigator -->
+        <!-- Principal Investigator (Science Support Contact) -->
         <xsl:variable name="piExist">
             <xsl:choose>
-                <xsl:when test="(//gmd:citation//gmd:CI_RoleCode[@codeListValue = 'principalInvestigator'])">1</xsl:when>
+                <xsl:when test="(//gmd:citation//gmd:CI_RoleCode[@codeListValue = 'principalInvestigator'] or //gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator')">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="piCnt" select="count(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[.//gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator'])"/>
+        <xsl:variable name="piCnt" select="count(//gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:citedResponsibleParty[.//gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator'] and //gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='principalInvestigator')"/>
 
         <!-- Reference System -->
         <xsl:variable name="referenceSystemExist">
@@ -402,9 +402,9 @@ normalize-space(//gmd:referenceSystemInfo/gmd:MD_CRS/gmd:datum/gmd:RS_Identifier
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="temporalResolutionCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:timeInterval)"/>        
+        <xsl:variable name="temporalResolutionCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:timeInterval)"/>
 
-        <!-- Theme, aka DataCite Resource Type-->
+        <!-- Theme, aka GCMD keywords-->
 		<xsl:variable name="themeKeywordExist">
 			<xsl:choose>
 				<xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue='theme'])">1</xsl:when>
@@ -447,11 +447,9 @@ normalize-space(//gmd:referenceSystemInfo/gmd:MD_CRS/gmd:datum/gmd:RS_Identifier
         <xsl:variable name="additionalInformationExist">
             <xsl:choose>
                 <xsl:when test="contains(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString, 'Documentation') or (//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when>
-        <!--        <xsl:when test="(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when> -->
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <!--  <xsl:variable name="additionalInformationCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)"/>  -->
         <xsl:variable name="additionalInformationCnt" select="count((//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString) or starts-with(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:name/gco:CharacterString, 'Documentation'))"/>
 
         <!-- Alternate Identifier -->
