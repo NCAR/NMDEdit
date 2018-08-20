@@ -444,11 +444,11 @@ normalize-space(//gmd:referenceSystemInfo/gmd:MD_CRS/gmd:datum/gmd:RS_Identifier
         <!-- Additional Information -->
         <xsl:variable name="additionalInformationExist">
             <xsl:choose>
-                <xsl:when test="contains(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString, 'Documentation') or (//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when>
+                <xsl:when test="(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="additionalInformationCnt" select="count((//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString) or starts-with(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:name/gco:CharacterString, 'Documentation'))"/>
+        <xsl:variable name="additionalInformationCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)"/>
 
         <!-- Alternate Identifier -->
         <xsl:variable name="alternateID" select="//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle/gco:CharacterString"/>

@@ -44,7 +44,7 @@
                 <xsl:value-of select="concat($recordSetPath, '?select=', $fileNamePattern)"/>
               </xsl:otherwise>
             </xsl:choose>
-          </xsl:variable>"archive ident","Total Score","metadataRecordID","ISO assetType","metadataContact","metadataDate","landingPage","title","publicationDate","author","publisher","abstract","resourceSupportContact","DataCite resourceType","legalConstraints","accessConstraints","resourceLanguage","| Tier 2 |","otherResponsibleParty/Custodian","otherResponsibleParty/Originator","otherResponsibleParty/ResourceProvider","credit (citation in worksheet)","citationDate","scienceSupportContact/PI","keywords (tags)","keywords (GCMD )","keywordVocabulary (GCMD) (themeKeywordThesaurus)","referenceSystem","spatialRepresentation(Type)","spatialResolution","ISO topicCategory","datasetExtent (Geolocation)","datasetExtentDescription","temporalCoverage","startDate","endDate","temporalResolution","verticalExtent","| Tier 3 |","relatedLinkIdentifier(relatedResource)","relatedLinkName","relatedLinkType","relatedlinkDescription","alternateIdentifier","resourceVersion","progress","resourceFormat","softwareImplementationLanguage","additionalInformation","distributor(contact)","distributionFormat","assetSize","authorIdentifier","| from Templates |","dataIdentification","metadataStandardName","metadataStandardVersion"
+          </xsl:variable>"archive ident","Total Score","metadataRecordID","ISO assetType","metadataContact","metadataDate","landingPage","title","publicationDate","author","publisher","abstract","resourceSupportContact","DataCite resourceType","legalConstraints","accessConstraints","resourceLanguage","| Tier 2 |","otherResponsibleParty/Custodian","otherResponsibleParty/Originator","otherResponsibleParty/ResourceProvider","credit","citationDate","scienceSupportContact/PI","keywords (tags)","keywords (GCMD )","keywordVocabulary","referenceSystem","spatialRepresentation","spatialResolution","ISO topicCategory","datasetExtent (Geolocation)","datasetExtentDescription","temporalCoverage","startDate","endDate","temporalResolution","verticalExtent","| Tier 3 |","relatedLinkIdentifier","relatedLinkName","relatedLinkType","relatedlinkDescription","alternateIdentifier","resourceVersion","progress","resourceFormat","softwareImplementationLanguage","additionalInformation","distributor","distributionFormat","assetSize","authorIdentifier","| from Templates |","dataIdentification","metadataStandardName","metadataStandardVersion"
           <xsl:for-each select="collection(iri-to-uri($xmlFilesSelect))">
             <xsl:sort select="subsequence(//gmd:fileIdentifier,1,1)"/>
             <xsl:apply-templates>
@@ -446,11 +446,11 @@ normalize-space(//gmd:referenceSystemInfo/gmd:MD_CRS/gmd:datum/gmd:RS_Identifier
         <!-- Additional Information -->
         <xsl:variable name="additionalInformationExist">
             <xsl:choose>
-                <xsl:when test="contains(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:CI_OnlineResource/gmd:name/gco:CharacterString, 'Documentation') or (//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when>
+                <xsl:when test="(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="additionalInformationCnt" select="count((//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString) or starts-with(//gmd:metadataExtensionInfo/gmd:MD_MetadataExtensionInformation/gmd:extensionOnLineResource/gmd:name/gco:CharacterString, 'Documentation'))"/>
+        <xsl:variable name="additionalInformationCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString)"/>
 
         <!-- Alternate Identifier -->
         <xsl:variable name="alternateID" select="//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:alternateTitle/gco:CharacterString"/>
@@ -605,41 +605,25 @@ normalize-space(//gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionForma
 "<xsl:value-of select="//gmd:alternateTitle/gco:CharacterString"/>",</xsl:when>
             <xsl:otherwise><!--  print out scores for each element to a line in XML file for this dataset  --> 
 "<xsl:value-of select="$fileID"/>",</xsl:otherwise>
- <!--   </xsl:choose><xsl:value-of select="format-number($levelsScore, '00')"/>,<xsl:value-of select="$abstractExist"/>,<xsl:value-of select="$assetTypeExist"/>,<xsl:value-of
- select="$authorExist"/>,<xsl:value-of select="$DataIdentificationExist"/>,<xsl:value-of select="$datasetLanguageExist"/>,<xsl:value-of select="$landingPageExist"/>,<xsl:value-of
- select="$metadataContactExist"/>,<xsl:value-of select="$metadataDateStampCnt"/>,<xsl:value-of select="$metadataRecordIDExist"/>,<xsl:value-of
- select="$metadataStandardNameExist"/>,<xsl:value-of select="$metadataStandardVersionExist"/>,<xsl:value-of select="$otherConstraintsExist"/>,<xsl:value-of
- select="$publicationDateExist"/>,<xsl:value-of select="$publisherExist"/>,<xsl:value-of select="$resourceContactExist"/>,<xsl:value-of select="$resourceTypeExist"/>,<xsl:value-of
- select="$titleExist"/>,<xsl:value-of select="$useConstraintsExist"/>,<xsl:value-of select="$citationDateExist"/>,<xsl:value-of select="$creditExist"/>,<xsl:value-of
- select="$custodianExist"/>,<xsl:value-of select="$datasetExtentExist"/>,<xsl:value-of select="$datasetExtentDescriptionExist"/>,<xsl:value-of select="$endDateExist"/>,<xsl:value-of
- select="$keywordExist"/>,<xsl:value-of select="$originatorExist"/>,<xsl:value-of select="$piExist"/>,<xsl:value-of select="$referenceSystemExist"/>,<xsl:value-of
- select="$resourceProviderExist"/>,<xsl:value-of select="$spatialRepresentationTypeExist"/>,<xsl:value-of select="$spatialResolutionExist"/>,<xsl:value-of
- select="$startDateExist"/>,<xsl:value-of select="$temporalExist"/>,<xsl:value-of select="$temporalResolutionExist"/>,<xsl:value-of select="$themeKeywordExist"/>,<xsl:value-of
- select="$themeKeywordThesaurusExist"/>,<xsl:value-of select="$topicCategoryExist"/>,<xsl:value-of select="$verticalExist"/>,<xsl:value-of
- select="$additionalInformationExist"/>,<xsl:value-of select="$alternateIDExist"/>,<xsl:value-of select="$assetSizeExist"/>,<xsl:value-of select="$authorIdentifierExist"/>,<xsl:value-of
- select="$distributionFormatExist"/>,<xsl:value-of select="$distributorContactExist"/>,<xsl:value-of select="$progressExist"/>,<xsl:value-of
- select="$relatedResourceDescriptionExist"/>,<xsl:value-of select="$relatedResourceExist"/>,<xsl:value-of select="$relatedResourceNameExist"/>,<xsl:value-of
- select="$relatedResourceTypeExist"/>,<xsl:value-of select="$resourceFormatExist"/>,<xsl:value-of select="$resourceVersionExist"/>,<xsl:value-of select="$softwareImplementationLanguage"/>
- -->
         </xsl:choose><xsl:value-of select="format-number($levelsScore, '00')"/>,<xsl:value-of select="$metadataRecordIDExist"/>,<xsl:value-of select="$assetTypeExist"/>,<xsl:value-of
  select="$metadataContactExist"/>,<xsl:value-of select="$metadataDateStampCnt"/>,<xsl:value-of select="$landingPageExist"/>,<xsl:value-of select="$titleExist"/>,<xsl:value-of
  select="$publicationDateExist"/>,<xsl:value-of select="$authorExist"/>,<xsl:value-of select="$publisherExist"/>,<xsl:value-of select="$abstractExist"/>,<xsl:value-of
  select="$resourceContactExist"/>,<xsl:value-of select="$resourceTypeExist"/>,<xsl:value-of select="$useConstraintsExist"/>,<xsl:value-of select="$otherConstraintsExist"/>,<xsl:value-of
  select="$datasetLanguageExist"/>,<xsl:value-of
- select="1"/>,<xsl:value-of
+ select="0"/>,<xsl:value-of
  select="$custodianExist"/>,<xsl:value-of select="$originatorExist"/>,<xsl:value-of select="$resourceProviderExist"/>,<xsl:value-of select="$creditExist"/>,<xsl:value-of
  select="$citationDateExist"/>,<xsl:value-of select="$piExist"/>,<xsl:value-of select="$keywordExist"/>,<xsl:value-of select="$themeKeywordExist"/>,<xsl:value-of
  select="$themeKeywordThesaurusExist"/>,<xsl:value-of select="$referenceSystemExist"/>,<xsl:value-of select="$spatialRepresentationTypeExist"/>,<xsl:value-of
  select="$spatialResolutionExist"/>,<xsl:value-of select="$topicCategoryExist"/>,<xsl:value-of select="$datasetExtentExist"/>,<xsl:value-of
  select="$datasetExtentDescriptionExist"/>,<xsl:value-of select="$temporalExist"/>,<xsl:value-of select="$startDateExist"/>,<xsl:value-of select="$endDateExist"/>,<xsl:value-of
  select="$temporalResolutionExist"/>,<xsl:value-of select="$verticalExist"/>,<xsl:value-of
- select="1"/>,<xsl:value-of
+ select="0"/>,<xsl:value-of
  select="$relatedResourceExist"/>,<xsl:value-of select="$relatedResourceNameExist"/>,<xsl:value-of select="$relatedResourceTypeExist"/>,<xsl:value-of
  select="$relatedResourceDescriptionExist"/>,<xsl:value-of select="$alternateIDExist"/>,<xsl:value-of select="$resourceVersionExist"/>,<xsl:value-of
  select="$progressExist"/>,<xsl:value-of select="$resourceFormatExist"/>,<xsl:value-of select="$softwareImplementationLanguage"/>,<xsl:value-of
  select="$additionalInformationExist"/>,<xsl:value-of select="$distributorContactExist"/>,<xsl:value-of select="$distributionFormatExist"/>,<xsl:value-of
  select="$assetSizeExist"/>,<xsl:value-of select="$authorIdentifierExist"/>,<xsl:value-of
- select="1"/>,<xsl:value-of
+ select="0"/>,<xsl:value-of
  select="$DataIdentificationExist"/>,<xsl:value-of select="$metadataStandardNameExist"/>,<xsl:value-of select="$metadataStandardVersionExist"/>
 	</xsl:template>
 </xsl:stylesheet>
