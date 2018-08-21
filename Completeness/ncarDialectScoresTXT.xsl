@@ -558,11 +558,11 @@ normalize-space(//gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionForma
         <!-- Resource Format -->
         <xsl:variable name="resourceFormatExist">
             <xsl:choose>
-                <xsl:when test="(/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString)">1</xsl:when>
+                <xsl:when test="(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString)">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="resourceFormatCnt" select="count(/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString)"/>
+        <xsl:variable name="resourceFormatCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceFormat/gmd:MD_Format/gmd:name/gco:CharacterString)"/>
 
         <!-- Resource Version -->
         <xsl:variable name="resourceVersionExist">
@@ -576,11 +576,11 @@ normalize-space(//gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionForma
         <!-- Software Implementation Language -->
         <xsl:variable name="softwareImplementationLanguage">
             <xsl:choose>
-                <xsl:when test="(/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription/gco:CharacterString)">1</xsl:when>
+                <xsl:when test="(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription/gco:CharacterString)">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="softwareImplementationLanguageCnt" select="count(/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription/gco:CharacterString)"/>
+        <xsl:variable name="softwareImplementationLanguageCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription/gco:CharacterString)"/>
 
         <!-- Levels Scores -->
         <xsl:variable name="level1Score" select="$abstractExist + $assetTypeExist + $authorExist + $DataIdentificationExist + $datasetLanguageExist + $metadataRecordIDExist + $landingPageExist + $metadataContactExist + $metadataDateStampCnt + $metadataStandardNameExist + $metadataStandardVersionExist + $otherConstraintsExist + $publicationDateExist + $publisherExist + $resourceContactExist + $resourceTypeExist + $titleExist + $useConstraintsExist"/>
