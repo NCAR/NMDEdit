@@ -89,8 +89,18 @@ for filename in os.listdir(input_directory):
 	plt.xticks(scale_index, labels, fontsize=11, rotation=45, ha='right')
 	plt.title(lab_name.upper()+' Completeness Score', fontsize=20)
 	plt.subplots_adjust(bottom=0.4, top=0.9)
+
+	# Set yticks to be integers for values less than 25
+	if max(values) == 2:
+		yticks = [0,1,2]
+		plt.yticks(yticks, yticks, fontsize=11)
+	elif max(values) <= 40 :
+		yticks = [int(max(values)/4 * i) for i in range(5)]
+		plt.yticks(yticks, yticks, fontsize=11)
+
+	# Save figure to output directory as .gif
 	fig.savefig(output_directory+lab_name+'.png')
-	
+		
 	print('Plot saved in the plots directory with the name '+ lab_name+ '.png')
 
 print('Done')
