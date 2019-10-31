@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml" 
     xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:functx="http://www.functx.com" xmlns:my="http://my-functions">
 
-  <!-- ncarDialectTotals.xsl ******************************************************************************
+  <!-- ncarDialectScoresTXT.xsl ******************************************************************************
 
         From a pathname to ISO 19115 metadata xml records, creates a report XML file for totals 
         of metadata elements for all files in the WAF, each line showing total for all elements per file.
@@ -88,7 +88,7 @@
         <!-- Asset Type -->
         <xsl:variable name="assetTypeExist">
             <xsl:choose>
-                <xsl:when test="(//gmd:hierarchyLevel/gmd:MD_ScopeCode != '')">1</xsl:when>
+                <xsl:when test="(//gmd:hierarchyLevel/gmd:MD_ScopeCode != '' or //gmd:hierarchyLevel/gmd:MD_ScopeCode[@codeListValue != ''])">1</xsl:when>
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -120,14 +120,16 @@
         </xsl:variable>
         <xsl:variable name="datasetLanguageCnt" select="count(normalize-space(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gmd:LanguageCode) != '' or normalize-space(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gco:CharacterString) != '')"/>
 
-         <!-- Landing Page -->
+         <!-- Landing Page (fixed for OpenSky RS_Identifiers, too)-->
         <xsl:variable name="landingPageExist">
             <xsl:choose>
-                <xsl:when test="(//gmd:dataSetURI/gco:CharacterString)">1</xsl:when>
+                <xsl:when test="(//gmd:dataSetURI/gco:CharacterString | /gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString[starts-with(.,'http://') or starts-with(.,'https://')]/text())">1</xsl:when>
+        <!--        <xsl:when test="(//gmd:dataSetURI/gco:CharacterString)">1</xsl:when>  -->
                 <xsl:otherwise>0</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="landingPageCnt" select="count(//gmd:dataSetURI/gco:CharacterString)"/>        
+        <xsl:variable name="landingPageCnt" select="count(//gmd:dataSetURI/gco:CharacterString and /gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:identifier/gmd:RS_Identifier/gmd:code/gco:CharacterString[starts-with(.,'http://') or starts-with(.,'https://')]/text())"/>        
+        <!--  <xsl:variable name="landingPageCnt" select="count(//gmd:dataSetURI/gco:CharacterString)"/>  --> 
 
         <!-- Metadata Contact -->
 		<xsl:variable name="metadataContactExist">
@@ -287,7 +289,7 @@
         </xsl:variable>
         <xsl:variable name="endDateCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:endPosition)"/>
 
-		<!-- Keywords -->
+		<!-- Keywords total -->
 		<xsl:variable name="keywordExist">
 			<xsl:choose>
 				<xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString)">1</xsl:when>
@@ -404,14 +406,22 @@ normalize-space(//gmd:referenceSystemInfo/gmd:MD_CRS/gmd:datum/gmd:RS_Identifier
         </xsl:variable>
         <xsl:variable name="temporalResolutionCnt" select="count(//gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:timeInterval)"/>
 
-        <!-- Theme, aka GCMD keywords-->
-		<xsl:variable name="themeKeywordExist">
+        <!-- Keyword, aka GCMD -->
+		<xsl:variable name="GCMDkeywordExist">
 			<xsl:choose>
-				<xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue='theme'])">1</xsl:when>
+                <xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='GCMD')">1</xsl:when>
+                <xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='Global Change Master Directory')">1</xsl:when>
+                <xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='Global Change Master Directory (GCMD)')">1</xsl:when>
+                <xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='U.S. National Aeronautics and Space Administration Global Change Master Directory')">1</xsl:when>
+                <xsl:when test="(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='NASA/GCMD Earth Science Keywords')">1</xsl:when>
 				<xsl:otherwise>0</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="themeKeywordCnt" select="count(//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode[@codeListValue='theme'])"/>
+	    <xsl:variable name="GCMDkeywordCnt" select="count((//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='GCMD') and
+	            (//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='Global Change Master Directory') and
+	            (//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='Global Change Master Directory (GCMD)') and
+	            (//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='U.S. National Aeronautics and Space Administration Global Change Master Directory') and
+	            (//gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString='NASA/GCMD Earth Science Keywords'))"/> 
 
 		<xsl:variable name="themeKeywordThesaurusExist">
 			<xsl:choose>
@@ -587,9 +597,9 @@ normalize-space(//gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionForma
         <xsl:variable name="level1Max">18</xsl:variable>
         <xsl:variable name="level1Total" select="$abstractCnt + $assetTypeCnt + $authorCnt + $DataIdentificationExist + $datasetLanguageCnt + $metadataRecordIDCnt + $landingPageCnt + $metadataContactCnt + $metadataDateStampCnt + $metadataStandardNameCnt + $metadataStandardVersionCnt + $otherConstraintsCnt + $publicationDateCnt + $publisherCnt + $resourceContactCnt + $resourceTypeCnt + $titleCnt + $useConstraintsCnt"/>
 
-        <xsl:variable name="level2Score" select="$citationDateExist + $creditExist + $custodianExist + $datasetExtentExist + $datasetExtentDescriptionExist + $startDateExist + $endDateExist + $keywordExist + $originatorExist + $piExist + $referenceSystemExist + $resourceProviderExist + $spatialRepresentationTypeExist + $spatialResolutionExist + $temporalExist + $temporalResolutionExist + $themeKeywordExist + $themeKeywordThesaurusExist + $topicCategoryExist + $verticalExist"/>
+        <xsl:variable name="level2Score" select="$citationDateExist + $creditExist + $custodianExist + $datasetExtentExist + $datasetExtentDescriptionExist + $startDateExist + $endDateExist + $keywordExist + $originatorExist + $piExist + $referenceSystemExist + $resourceProviderExist + $spatialRepresentationTypeExist + $spatialResolutionExist + $temporalExist + $temporalResolutionExist + $GCMDkeywordExist + $themeKeywordThesaurusExist + $topicCategoryExist + $verticalExist"/>
         <xsl:variable name="level2Max">20</xsl:variable>
-        <xsl:variable name="level2Total" select="$citationDateCnt + $creditCnt + $custodianCnt + $datasetExtentCnt + $datasetExtentDescriptionCnt + $startDateCnt + $endDateCnt + $keywordCnt + $originatorCnt + $piCnt + $referenceSystemCnt + $resourceProviderCnt + $spatialRepresentationTypeCnt + $spatialResolutionCnt + $temporalCnt + $temporalResolutionCnt + $themeKeywordCnt + $themeKeywordThesaurusCnt + $topicCategoryCnt + $verticalCnt"/>
+        <xsl:variable name="level2Total" select="$citationDateCnt + $creditCnt + $custodianCnt + $datasetExtentCnt + $datasetExtentDescriptionCnt + $startDateCnt + $endDateCnt + $keywordCnt + $originatorCnt + $piCnt + $referenceSystemCnt + $resourceProviderCnt + $spatialRepresentationTypeCnt + $spatialResolutionCnt + $temporalCnt + $temporalResolutionCnt + $GCMDkeywordCnt + $themeKeywordThesaurusCnt + $topicCategoryCnt + $verticalCnt"/>
 
         <xsl:variable name="level3Score" select="$additionalInformationExist + $alternateIDExist + $assetSizeExist + $authorIdentifierExist + $distributorContactExist + $distributionFormatExist + $progressExist + $relatedResourceExist + $relatedResourceDescriptionExist + $relatedResourceNameExist + $relatedResourceTypeExist + $resourceFormatExist + $resourceVersionExist + $softwareImplementationLanguage"/>
         <xsl:variable name="level3Max">14</xsl:variable>
@@ -612,7 +622,7 @@ normalize-space(//gmd:distributionInfo/gmd:MD_Distribution/gmd:distributionForma
  select="$datasetLanguageExist"/>,<xsl:value-of
  select="0"/>,<xsl:value-of
  select="$custodianExist"/>,<xsl:value-of select="$originatorExist"/>,<xsl:value-of select="$resourceProviderExist"/>,<xsl:value-of select="$creditExist"/>,<xsl:value-of
- select="$citationDateExist"/>,<xsl:value-of select="$piExist"/>,<xsl:value-of select="$keywordExist"/>,<xsl:value-of select="$themeKeywordExist"/>,<xsl:value-of
+ select="$citationDateExist"/>,<xsl:value-of select="$piExist"/>,<xsl:value-of select="$keywordExist"/>,<xsl:value-of select="$GCMDkeywordExist"/>,<xsl:value-of
  select="$themeKeywordThesaurusExist"/>,<xsl:value-of select="$referenceSystemExist"/>,<xsl:value-of select="$spatialRepresentationTypeExist"/>,<xsl:value-of
  select="$spatialResolutionExist"/>,<xsl:value-of select="$topicCategoryExist"/>,<xsl:value-of select="$datasetExtentExist"/>,<xsl:value-of
  select="$datasetExtentDescriptionExist"/>,<xsl:value-of select="$temporalExist"/>,<xsl:value-of select="$startDateExist"/>,<xsl:value-of select="$endDateExist"/>,<xsl:value-of
