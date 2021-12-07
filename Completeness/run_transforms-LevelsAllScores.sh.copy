@@ -1,0 +1,24 @@
+#!/bin/tcsh
+
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/acom-Scores.html WAF_BASE=../WAFs recordSetPath=acom --suppressXsltNamespaceCheck:on
+echo "processed acom"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/cgd-Scores.html WAF_BASE=..//WAFs recordSetPath=cgd --suppressXsltNamespaceCheck:on
+echo "processed cgd"
+# java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/cisl-Scores.html WAF_BASE=../WAFs recordSetPath=cisl --suppressXsltNamespaceCheck:on
+# echo "processed cisl"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/eol-Scores.html WAF_BASE=../WAFs recordSetPath=eol --suppressXsltNamespaceCheck:on
+echo "processed eol"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/hao-Scores.html WAF_BASE=../WAFs recordSetPath=hao --suppressXsltNamespaceCheck:on
+echo "processed hao"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/library-Scores.html WAF_BASE=../WAFs recordSetPath=library --suppressXsltNamespaceCheck:on
+echo "processed library"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/mmm-Scores.html WAF_BASE=../WAFs recordSetPath=mmm --suppressXsltNamespaceCheck:on
+echo "processed mmm"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/opensky-Scores.html WAF_BASE=../WAFs recordSetPath=opensky --suppressXsltNamespaceCheck:on
+echo "processed opensky"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/rda-Scores.html WAF_BASE=../WAFs recordSetPath=rda --suppressXsltNamespaceCheck:on
+echo "processed rda"
+# java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/ral-Scores.html WAF_BASE=../WAFs recordSetPath=ral --suppressXsltNamespaceCheck:on
+# echo "processed ral"
+java net.sf.saxon.Transform -s:WAFs/labs.xml -xsl:LevelsAllScores/ncarDialectScoresHTML.xsl -o:../xsl/out/Lab_scores/LevelsAllScores/unidata-Scores.html WAF_BASE=../WAFs recordSetPath=unidata --suppressXsltNamespaceCheck:on
+echo "processed unidata"
